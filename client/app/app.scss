@@ -23,5 +23,22 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 /* inject:scss */
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'scss/base/_core.scss';
+@import 'scss/base/_glyphs.scss';
+@import 'scss/base/_typography.scss';
+@import 'scss/extends/_animations.scss';
+@import 'scss/extends/_helpers.scss';
+@import 'scss/layout/_article-composition.scss';
+@import 'scss/layout/_aside-sidebar.scss';
+@import 'scss/layout/_footer-root.scss';
+@import 'scss/layout/_header-banner.scss';
+@import 'scss/layout/_main-principal.scss';
+@import 'scss/layout/_nav-navigation.scss';
+@import 'scss/modules/_images.scss';
+@import 'scss/package.scss';
+@import 'scss/pages/_home-page.scss';
+@import 'scss/utilities/_config.scss';
+@import 'scss/utilities/_functions.scss';
+@import 'scss/utilities/_mixins.scss';
 @import '../components/footer/footer.scss';
 /* endinject */

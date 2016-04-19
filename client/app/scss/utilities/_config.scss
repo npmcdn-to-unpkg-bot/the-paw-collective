@@ -1,0 +1,34 @@
+// _config.scss
+
+/// Sans-serif font stacks
+$font-stack-open-sans: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$font-stack-futura: Futura, 'Trebuchet MS', Arial, Helvetica, sans-serif !default;
+$font-stack-garamond: Garamond, Constantia, 'Times New Roman', Times, serif !default;
+$font-stack-consolas: 'Consolas', 'Courier New', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Standard colors
+$clear: transparent !default;
+$black: #000000 !default;
+$red: #FF0000 !default;
+$maroon: #800000 !default;
+$blue: #0000FF !default;
+
+/// Variant and custom colors
+$gallery: #EFEFEF !default;
+$cod-gray: #0B0B0B !default;
+$java: #1FC2C2 !default;
+$pacific-blue: #009DC4 !default;
+
+/// Color usage
+$primary-color: $red;
+$secondary-color: $maroon;
+$tertiary-color: $blue;
+$quaternary-color: $pacific-blue;
+$quinary-color: $java;
+$shadow-color: rgba($black, 1);
+
+/// Font size usage
+$lg-font-size: 110%;
+$sm-font-size: 70%;
+

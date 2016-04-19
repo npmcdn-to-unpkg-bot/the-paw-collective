@@ -1,0 +1,29 @@
+
+@charset 'UTF-8';
+
+// Utilities
+@import 'utilities/config';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+
+// Extends
+@import 'extends/animations';
+
+// Base
+@import 'base/glyphs';
+@import 'base/core';
+@import 'base/typography';
+
+// Layouts
+@import 'layout/header-banner';
+@import 'layout/footer-root';
+@import 'layout/main-principal';
+@import 'layout/article-composition';
+@import 'layout/aside-sidebar';
+@import 'layout/nav-navigation';
+
+// Modules
+@import 'modules/images';
+
+// Pages
+@import 'pages/home-page';

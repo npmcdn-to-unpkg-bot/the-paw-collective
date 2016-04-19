@@ -1,0 +1,43 @@
+// _mixins.scss
+
+@mixin el($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin mo($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to($key) {
+  $value: map-get($breakpoints, $key);
+
+  @if not $value {
+    @error 'No value found for `#{$key}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @media #{if(type-of($value) == 'string', unquote($value), inspect($value))} {
+    @content;
+  }
+}
