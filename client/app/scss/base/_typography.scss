@@ -1,2 +1,27 @@
 // _typography.scss
 
+@font-face {
+  font-family: 'mark';
+  src: url('../../assets/fonts/MarkOffc-Book.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/MarkOffc-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/MarkOffc-Book.woff') format('woff'), /* Modern Browsers */
+       url('../../assets/fonts/MarkOffc-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../assets/fonts/MarkOffc-Book.svg#4567396a200398a134037ab3af1dd1aa') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+@font-face {
+  font-family: 'mark';
+  src: url('../../assets/fonts/MarkOffc-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/MarkOffc-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/MarkOffc-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../../assets/fonts/MarkOffc-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../assets/fonts/MarkOffc-Bold.svg#656228237efe1218a14602670c97789f') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+

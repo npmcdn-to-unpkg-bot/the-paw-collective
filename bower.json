@@ -11,7 +11,9 @@
     "angular-route": "~1.5.0",
     "font-awesome": ">=4.1.0",
     "lodash": "~2.4.1",
-    "angular-validation-match": "~1.5.2"
+    "angular-validation-match": "~1.5.2",
+    "susy": "~2.2.12",
+    "bourbon": "~4.2.7"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.0"

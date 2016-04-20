@@ -1,9 +1,99 @@
-// _nav-navigation.scss
 
-////= Navigation Styling
-//======================================================================//
+.nav {
+    background: white;
+    height: 116px;
+    > .container {
+        height: 100%;
+        position: relative;
+        @include display(flex);
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include align-items(center);
+    }
+}
 
-.nav,
-.navigation {
-  //
+.logo {
+    display: inline-block;
+    &-link {
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.1em;
+    }
+}
+
+.avatar {
+    display: inline-block;
+    margin-left: auto;
+    &-image {
+        border-radius: 200%;
+        height: 42px;
+        width: 42px;
+    }
+}
+
+.dropdown {
+    background: white;
+    border-radius: 0.2em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    padding: 5px 0;
+    position: absolute;
+    right: -20px;
+    top: 90px;
+
+    // Caret
+    &-caret {
+        left: auto;
+        right: 30px;
+    }
+
+
+    &-items {
+
+    	> li {
+			
+			border-top: 1px solid #E1E8ED;
+	        border-bottom: 1px solid #E1E8ED;
+	        color: #a1a2a3;
+	        font-size: 0.8em;
+	        padding: 10px 20px;
+
+	        &:hover {
+	            background: black;
+	            color: white;
+	        }
+
+	    }
+
+	    &:first-of-type,
+	    &:last-of-type {
+	    	> li {
+				border-top: none;
+            	border-bottom: none;
+	    	}
+	    }
+    }
+
+    &::before {
+        position: absolute;
+        top: -7px;
+        right: 32px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #CCC;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: '';
+    }
+    &::after {
+        position: absolute;
+        top: -6px;
+        right: 33px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid white;
+        border-left: 6px solid transparent;
+        content: '';
+    }
 }

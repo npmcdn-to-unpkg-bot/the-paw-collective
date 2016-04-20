@@ -1,5 +1,8 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
+@import '../bower_components/susy/sass/susy';
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
 
 /**
  * App-wide Styles
@@ -21,24 +24,9 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'admin-dashboard/admin-dashboard.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
-@import 'scss/base/_core.scss';
-@import 'scss/base/_glyphs.scss';
-@import 'scss/base/_typography.scss';
-@import 'scss/extends/_animations.scss';
-@import 'scss/extends/_helpers.scss';
-@import 'scss/layout/_article-composition.scss';
-@import 'scss/layout/_aside-sidebar.scss';
-@import 'scss/layout/_footer-root.scss';
-@import 'scss/layout/_header-banner.scss';
-@import 'scss/layout/_main-principal.scss';
-@import 'scss/layout/_nav-navigation.scss';
-@import 'scss/modules/_images.scss';
-@import 'scss/package.scss';
-@import 'scss/pages/_home-page.scss';
-@import 'scss/utilities/_config.scss';
-@import 'scss/utilities/_functions.scss';
-@import 'scss/utilities/_mixins.scss';
 @import '../components/footer/footer.scss';
+@import 'scss/package.scss';
 /* endinject */

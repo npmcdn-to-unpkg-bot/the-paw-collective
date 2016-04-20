@@ -4,6 +4,7 @@ angular.module('animalCollectiveApp', [
   'animalCollectiveApp.auth',
   'animalCollectiveApp.admin',
   'animalCollectiveApp.constants',
+  'animalCollectiveApp.dashboard',
   'ngCookies',
   'ngResource',
   'ngSanitize',
