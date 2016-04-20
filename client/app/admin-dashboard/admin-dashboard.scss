@@ -16,11 +16,72 @@
 
 		> a {
 			
-			border-bottom: 1px solid blue;
-			color:blue;
 			font-size:1.1em;
 			padding-bottom: 18px;
 			margin-right:20px;
+
+			&.active {
+				border-bottom: 1px solid blue;
+				color:blue;
+			}
 		}
 	}
 }
+
+.animal-list {
+
+	&-box {
+
+		height:75px;
+	
+		&--items {
+			padding:15px 20px;
+
+			@include display(flex);
+        	@include flex-direction(row);
+        	@include align-items(center);
+
+        	
+        	&:nth-child(even) {
+        		background:#EDEDED;
+        	}
+
+        	&:nth-child(odd) {
+        		background:white;
+        	}
+		}
+
+	}
+
+	&-avatar {
+		width:50px;
+		height:50px;
+		border-radius:200%;
+	}
+
+	&-info {
+
+		display:inline-block;
+		padding-left:20px;
+
+		&--name, &--id {
+			padding:3px 0;
+		}
+
+		&--name {
+			font-size:1.3em;
+			font-weight:700;
+		}
+
+		&--id {
+			font-size:0.9em;
+			color:gray;
+		}
+	}
+
+	&-more {
+		margin-left:auto;
+	}
+
+}
+

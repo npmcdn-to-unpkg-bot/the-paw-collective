@@ -19,10 +19,60 @@
 
 <section class="subhead">
 	<div class="container">
-		<h1 class="subhead-title">The Dashboard</h1>
+		<h1 class="subhead-title">{{adminDashboard.title}}</h1>
 		<div class="subhead-menu">
-			<a href="#">Animals</a>
-			<a href="#">Interviews</a>
+			<a href="#"  ng-class="{active: adminDashboard.isActive('/admin-dashboard')}">Animals</a>
+			<a href="#"  ng-class="{active: adminDashboard.isActive('/admin-interviews')}">Interviews</a>
+		</div>
+	</div>
+</section>
+
+<section class="animal-list">
+	<div class="container">
+
+		<div class="animal-list-box">
+			<ul>
+				<li class="animal-list-box--items">
+					<img class="animal-list-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="">
+					<div class="animal-list-info">
+						<p class="animal-list-info--name">Name</p>
+						<p class="animal-list-info--id">Instgram ID</p>
+					</div>
+					<div class="animal-list-more">
+						<p>...</p>
+					</div>
+				</li>
+				<li class="animal-list-box--items">
+					<img class="animal-list-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="">
+					<div class="animal-list-info">
+						<p class="animal-list-info--name">Name</p>
+						<p class="animal-list-info--id">Instgram ID</p>
+					</div>
+					<div class="animal-list-more">
+						<p>...</p>
+					</div>
+				</li>
+				<li class="animal-list-box--items">
+					<img class="animal-list-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="">
+					<div class="animal-list-info">
+						<p class="animal-list-info--name">Name</p>
+						<p class="animal-list-info--id">Instgram ID</p>
+					</div>
+					<div class="animal-list-more">
+						<p>...</p>
+					</div>
+				</li>
+				<li class="animal-list-box--items">
+					<img class="animal-list-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="">
+					<div class="animal-list-info">
+						<p class="animal-list-info--name">Name</p>
+						<p class="animal-list-info--id">Instgram ID</p>
+					</div>
+					<div class="animal-list-more">
+						<p>...</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </section>
