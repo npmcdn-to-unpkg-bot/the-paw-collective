@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('animalCollectiveApp.dashboard', [
-  'ngRoute'
+	'animalCollectiveApp.auth',
+    'ngRoute'
 ]);

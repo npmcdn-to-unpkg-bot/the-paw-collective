@@ -6,6 +6,7 @@ angular.module('animalCollectiveApp.dashboard')
       .when('/admin-dashboard', {
         templateUrl: 'app/admin-dashboard/admin-dashboard.html',
         controller: 'AdminDashboardController',
-        controllerAs: 'adminDashboard'
+        controllerAs: 'adminDashboard',
+        authenticate: 'admin'
       });
   });

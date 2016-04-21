@@ -4,7 +4,8 @@ import mongoose from 'mongoose';
 
 var AnimalsSchema = new mongoose.Schema({
   name: String,
-  info: String,
+  instagram: String,
+  category: String,
   active: Boolean
 });
 
