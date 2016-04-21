@@ -25,7 +25,10 @@
 
 .avatar {
     display: inline-block;
+    cursor:pointer;
+
     margin-left: auto;
+
     &-image {
         border-radius: 200%;
         height: 42px;
@@ -41,6 +44,15 @@
     position: absolute;
     right: -20px;
     top: 90px;
+    visibility: hidden;
+    opacity:0;
+
+    &.active {
+        display:block;
+        visibility: visible;
+        opacity:1;
+        @include transition(opacity 0.1s ease-in 0s);
+    }
 
     // Caret
     &-caret {
