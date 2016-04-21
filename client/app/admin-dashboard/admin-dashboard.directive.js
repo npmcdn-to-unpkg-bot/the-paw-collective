@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('animalCollectiveApp.dashboard')
-    .directive('adminDashboard', function($document) {
+    .directive('adminDashboard', ($document) => {
         return {
             restrict: 'EA',
-            link: function(scope, elem, attrs) {
+            link: (scope, elem, attrs) => {
 
                 let dropdownElem = angular.element(elem.parent().children()[2]),
                     isOpen = false;
@@ -21,7 +21,7 @@ angular.module('animalCollectiveApp.dashboard')
                     }
                 });
 
-                $document.bind('click', function() {
+                $document.bind('click', () => {
                     if (isOpen) {
                         dropdownElem.removeClass('active');
                     } else {
@@ -30,4 +30,29 @@ angular.module('animalCollectiveApp.dashboard')
                 })
             }
         };
-    });
+    })
+
+.directive('circleMenu', () => {
+    return {
+        restrict: 'EA',
+        link: (scope, elem, attrs) => {
+
+            let menu = angular.element(elem.parent().children()[0]);
+
+            elem.bind('mouseenter', () => {
+
+                // Slide Out Button
+                elem.addClass('fade-out');
+
+                // Slide In Menu
+                menu.addClass('fade-in');
+            })
+
+            menu.bind('mouseleave', () => {
+                elem.removeClass('fade-out');
+                menu.removeClass('fade-in');
+            });
+
+        }
+    }
+})

@@ -28,6 +28,58 @@
 	}
 }
 
+.three-dots-menu {
+	float:left;
+	position:relative;
+	top:3px;
+	right: -2.6em;
+	padding:1em;
+	margin:-1em;
+	visibility:hidden;
+	opacity:0;
+	@include transition(opacity 0.2s ease-in);
+	
+	ul > {
+		li {
+			padding-right:10px;
+			display:inline-block;
+			cursor:pointer;
+		}
+	}
+}
+
+svg.three-dots {
+	padding: 1em; 
+	margin: -1em;
+	cursor:pointer;
+	position:relative;
+	left:7px;
+}
+
+svg #three-dots {
+	@include transition(opacity 0.2s ease-in);
+	opacity:1;
+}
+
+.slide-right {
+	
+	@include transition(opacity 0.2s ease-in);
+	visibility:visible;
+	opacity:1;
+}
+
+.fade-in {
+	opacity:1;
+	@include transition(opacity 0.2s ease-in);
+	visibility:visible;
+}
+
+.fade-out {
+	opacity:0;
+	@include transition(opacity 0.2s ease-in);
+	visibility:hidden;
+}
+
 .animal-list {
 
 	&-box {
@@ -35,7 +87,9 @@
 		height:75px;
 	
 		&--items {
+
 			padding:15px 20px;
+			overflow:hidden;
 
 			@include display(flex);
         	@include flex-direction(row);
