@@ -28,6 +28,7 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
+                    <input type="text" ng-model="adminAnimal.file" placeholder="(optional) URL of the Image" class="ac-label default">
                     <button class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(adminAnimal.animal)">SAVE</button>
                     <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
                 </form>

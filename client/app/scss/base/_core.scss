@@ -20,10 +20,14 @@ select {
     font-size: 0.9em;
 }
 
-input.ng-valid.ng-touched {
+input.ng-untouched {
+    background:none;
+}
+
+input.ng-valid-required.ng-valid-parse {
     background: rgba(0, 140, 0, 0.14);
 }
 
-input.ng-invalid.ng-touched {
+input.ng-invalid.ng-valid-parse {
     background: rgba(255, 0, 0, 0.14);
 }
