@@ -9,38 +9,47 @@
             this.Upload = Upload
             this.queue = []
 
-            // this.upload()
+            // List of Animal Categories
+            this.categories = ['Dog', 'Cat', 'Others']
+
+            // Set the default category choice
+            this.category = 0
+
         }
 
         upload(animal) {
-        	console.log('uploading....')
 
-        	this.Upload.upload({
-        		url: 'api/image-uploads',
-        		data: {
-        			file: this.file,
-        			'username' : 'username-example'
-        		}
-        	}).then((resp) => {
-        		console.log('The response is', resp.data.url)
-        		animal.image = resp.data.url
+            if (!this.file) {
+                alert('You need to upload an image')
+                return
+            }
 
-				// Make a post with Data (animal)
-        		let request = this.$http.post('/api/animal', animal)
-				this.queue.push(request)
+            this.Upload.upload({
+                url: 'api/image-uploads',
+                data: {
+                    file: this.file,
+                    'username': 'username-example'
+                }
+            }).then((resp) => {
+                console.log('The response is', resp.data.url)
+                animal.image = resp.data.url
 
-				console.log('Success' + resp.config.data.file.name + 'uploaded.  Response:' + resp.data)
+                // Make a post with Data (animal)
+                let request = this.$http.post('/api/animal', animal)
+                this.queue.push(request)
 
-				return this.$q.all(this.queue).then((result) => {
-					console.log('the animal has been added')
-				})
+                console.log('Success' + resp.config.data.file.name + 'uploaded.  Response:' + resp.data)
 
-        	}, (resp) => {
-        		console.log('Error status: ' + resp.status)
-        	}, (evt) => {
-        		let progressPercentage = parseInt(100.0 * evt.loaded / evt.total)
-        		console.log('progress: ' + progressPercentage + '% '  + evt.config.data.file.name)
-        	})
+                return this.$q.all(this.queue).then((result) => {
+                    console.log('the animal has been added')
+                })
+
+            }, (resp) => {
+                console.log('Error status: ' + resp.status)
+            }, (evt) => {
+                let progressPercentage = parseInt(100.0 * evt.loaded / evt.total)
+                console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name)
+            })
         }
 
 

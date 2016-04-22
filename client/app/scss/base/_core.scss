@@ -1,15 +1,29 @@
 // _core.scss
-
 body {
-	font-family: $font-stack-mark;
-	background:#F7F7F7;
+    font-family: $font-stack-mark;
+    background: #F7F7F7;
 }
 
 .container {
-	@include container(80%);
+    @include container(80%);
 }
 
 a {
-	text-decoration:none;
-	color:inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+select {
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+input.ng-valid.ng-touched {
+    background: rgba(0, 140, 0, 0.14);
+}
+
+input.ng-invalid.ng-touched {
+    background: rgba(255, 0, 0, 0.14);
 }

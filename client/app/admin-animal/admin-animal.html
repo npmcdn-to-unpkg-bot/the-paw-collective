@@ -4,10 +4,11 @@
         <div class="create-animal-box-wrapper">
             <!-- Left Box -->
             <div class="create-animal-box-left">
-                <form action="">
-                    <input type="text" ng-model="animal.name" placeholder="Name" class="ac-label default">
-                    <input type="text" ng-model="animal.instagram" placeholder="Instagram ID" class="ac-label default">
-                    <input type="text" ng-model="animal.category" placeholder="Category" class="ac-label default">
+                <form name="addAnimalForm">
+                    <input type="text" ng-model="animal.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
+                    <input type="text" ng-model="animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
+                    <select ng-model="animal.category" ng-options="days.indexOf(i) as i for i in adminAnimal.categories">
+                    </select>
                     <p class="drop-box--subtitle">Photo of the animal</p>
                     <div ngf-drop ngf-select ng-model="adminAnimal.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,11 +28,11 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
-                    <a href="#" ng-click="adminAnimal.upload(animal)" class="ac-button">Save</a>
+                    <button class="ac-button" ng-disabled="addAnimalForm.$invalid" ng-click="adminAnimal.upload(animal)">SAVE</button>
                 </form>
             </div>
             <!-- Right Box -->
-            <div ngf-background="adminAnimal.file || 'http://bhspa.com/wp-content/uploads/2013/04/placeholder1.jpg'" class="create-animal-box-right portrait">
+            <div ngf-background="adminAnimal.file || '../assets/images/dog_image.jpg'" class="create-animal-box-right portrait">
             </div>
         </div>
     </div>
