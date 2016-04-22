@@ -6,6 +6,7 @@ var AnimalsSchema = new mongoose.Schema({
     name: String,
     instagram: String,
     category: String,
+    image: String,
     active: Boolean
 })
 

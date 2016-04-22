@@ -1,5 +1,4 @@
 /**
- * Using Rails-like standard naming convention for endpoints.
  * GET     /api/animal              ->  index
  * POST    /api/animal              ->  create
  * GET     /api/animal/:id          ->  show

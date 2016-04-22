@@ -11,4 +11,9 @@ module.exports = {
 
     // Control debug level for modules using visionmedia/debug
     DEBUG: ''
+
+    // Cloudinary Keys/Api
+    CLOUD_NAME: 'asdf',
+    CLOUD_API_KEY: '1234',
+    CLOUD_API_SECRET: '1234'
 }

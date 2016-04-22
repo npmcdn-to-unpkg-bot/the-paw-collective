@@ -5,7 +5,7 @@ angular.module('animalCollectiveApp.animals')
         $routeProvider
             .when('/admin-dashboard/create-animal', {
                 templateUrl: 'app/admin-animal/admin-animal.html',
-                controller: 'AdminDashboardController',
+                controller: 'AdminAnimalComponent',
                 controllerAs: 'adminAnimal',
                 authenticate: 'admin'
             })
