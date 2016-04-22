@@ -10,23 +10,21 @@
             this.$http = $http;
             this.title = "The Dashboard";
 
-            this.onInit();
-
+            this.onInit()
         }
 
-        onInit(){
+        onInit() {
             this.$http.get('/api/animal').then(response => {
                 console.log('Animals repsonse is', response);
-                // this.awesomeThings = response.data;
-            });
+            })
         }
 
         isActive(route) {
-            return route === this.$location.path();
+            return route === this.$location.path()
         }
     }
 
     angular.module('animalCollectiveApp.dashboard')
-        .controller('AdminDashboardController', AdminDashboardController);
+        .controller('AdminDashboardController', AdminDashboardController)
 
-})();
+})()

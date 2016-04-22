@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
 angular.module('animalCollectiveApp.admin', [
-  'animalCollectiveApp.auth',
-  'ngRoute'
-]);
+    'animalCollectiveApp.auth',
+    'ngRoute'
+])

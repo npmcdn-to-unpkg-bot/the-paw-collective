@@ -2,20 +2,17 @@
 
 	.container {
 		background:white;
-
 		@include display(flex);
 	}
 
 	&-left {
 		@include span(7 of 12);
-
 		padding:60px;
 		box-sizing: border-box
 	}
 
 	&-right {
 		@include span(5 of 12 last);
-
 		background-image:url('../assets/images/dog_image.jpg');
 		background-size:cover;
 		background-position:50% 50%;
@@ -49,6 +46,7 @@
 		padding: 15px 0;
 	}
 }
+
 .dragover {
     border: 1px dashed #5A43FA;
 }

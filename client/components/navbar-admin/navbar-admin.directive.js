@@ -18,25 +18,25 @@ angular.module('animalCollectiveApp')
 
 	            elem.bind('click', (e) => {
 
-	                e.stopPropagation();
-	                isOpen = true;
+	                e.stopPropagation()
+	                isOpen = true
 
 	                if (dropdownElem.hasClass('active')) {
-	                    dropdownElem.removeClass('active');
+	                    dropdownElem.removeClass('active')
 	                } else {
-	                    dropdownElem.addClass('active');
+	                    dropdownElem.addClass('active')
 	                }
-	            });
+	            })
 
 	            $document.bind('click', () => {
 	                if (isOpen) {
-	                    dropdownElem.removeClass('active');
+	                    dropdownElem.removeClass('active')
 	                } else {
-	                    isOpen = false;
+	                    isOpen = false
 	                }
 	            })
 	        }
-	    };
+	    }
 	})
 
 	.directive('circleMenu', () => {
@@ -44,22 +44,22 @@ angular.module('animalCollectiveApp')
 	        restrict: 'EA',
 	        link: (scope, elem, attrs) => {
 
-	            let menu = angular.element(elem.parent().children()[0]);
+	            let menu = angular.element(elem.parent().children()[0])
 
 	            elem.bind('mouseenter', () => {
 
 	                // Slide Out Button
-	                elem.addClass('fade-out');
+	                elem.addClass('fade-out')
 
 	                // Slide In Menu
-	                menu.addClass('fade-in');
+	                menu.addClass('fade-in')
 	            })
 
 	            menu.bind('mouseleave', () => {
-	                elem.removeClass('fade-out');
-	                menu.removeClass('fade-in');
-	            });
+	                elem.removeClass('fade-out')
+	                menu.removeClass('fade-in')
+	            })
 
 	        }
 	    }
-	});
+	})

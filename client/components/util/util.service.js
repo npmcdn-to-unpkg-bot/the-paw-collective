@@ -25,14 +25,14 @@ function UtilService($window) {
      */
     urlParse(url) {
       var a = document.createElement('a');
-      a.href = url;
+      a.href = url
 
       // Special treatment for IE, see http://stackoverflow.com/a/13405933 for details
       if (a.host === '') {
-        a.href = a.href;
+        a.href = a.href
       }
 
-      return a;
+      return a
     },
 
     /**
@@ -40,26 +40,27 @@ function UtilService($window) {
      *
      * @param  {String}           url       - url to test
      * @param  {String|String[]}  [origins] - additional origins to test against
-     * @return {Boolean}                    - true if url is same origin
+     * @return {Boolean}
+- true if url is same origin
      */
     isSameOrigin(url, origins) {
-      url = Util.urlParse(url);
-      origins = (origins && [].concat(origins)) || [];
-      origins = origins.map(Util.urlParse);
-      origins.push($window.location);
+      url = Util.urlParse(url)
+      origins = (origins && [].concat(origins)) || []
+      origins = origins.map(Util.urlParse)
+      origins.push($window.location)
       origins = origins.filter(function(o) {
         return url.hostname === o.hostname &&
           url.port === o.port &&
-          url.protocol === o.protocol;
-      });
-      return (origins.length >= 1);
+          url.protocol === o.protocol
+      })
+      return (origins.length >= 1)
     }
-  };
+  }
 
-  return Util;
+  return Util
 }
 
 angular.module('animalCollectiveApp.util')
-  .factory('Util', UtilService);
+  .factory('Util', UtilService)
 
-})();
+})()

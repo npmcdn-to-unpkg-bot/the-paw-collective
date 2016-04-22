@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
 angular.module('animalCollectiveApp')
-  .config(function($routeProvider) {
-    $routeProvider
-      .when('/', {
-        template: '<main></main>'
-      });
-  });
+    .config(function($routeProvider) {
+        $routeProvider
+            .when('/', {
+                template: '<main></main>'
+            })
+    })

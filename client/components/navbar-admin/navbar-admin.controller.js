@@ -1,28 +1,28 @@
 'use strict';
 
 class NavbarAdminController {
-  //start-non-standard
-  menu = [{
-    'title': 'Home',
-    'link': '/'
-  }];
+    //start-non-standard
+    menu = [{
+        'title': 'Home',
+        'link': '/'
+    }];
 
-  isCollapsed = true;
-  //end-non-standard
+    isCollapsed = true;
+    //end-non-standard
 
-  constructor($location, Auth) {
-    this.$location = $location;
-    this.isLoggedIn = Auth.isLoggedIn;
-    this.isAdmin = Auth.isAdmin;
-    this.getCurrentUser = Auth.getCurrentUser;
+    constructor($location, Auth) {
+        this.$location = $location
+        this.isLoggedIn = Auth.isLoggedIn
+        this.isAdmin = Auth.isAdmin
+        this.getCurrentUser = Auth.getCurrentUser
 
-    this.title = "Create an animal";
-  }
+        this.title = "Create an animal"
+    }
 
-  isActive(route) {
-    return route === this.$location.path();
-  }
+    isActive(route) {
+        return route === this.$location.path()
+    }
 }
 
 angular.module('animalCollectiveApp')
-  .controller('NavbarAdminController', NavbarAdminController);
+    .controller('NavbarAdminController', NavbarAdminController)

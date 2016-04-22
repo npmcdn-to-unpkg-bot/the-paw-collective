@@ -22,6 +22,6 @@
     }
 
     angular.module('animalCollectiveApp.auth')
-        .factory('User', UserResource);
+        .factory('User', UserResource)
 
-})();
+})()
