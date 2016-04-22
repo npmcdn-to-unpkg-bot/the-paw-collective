@@ -1,0 +1,54 @@
+.create-animal-box {
+
+	.container {
+		background:white;
+
+		@include display(flex);
+	}
+
+	&-left {
+		@include span(7 of 12);
+
+		padding:60px;
+		box-sizing: border-box
+	}
+
+	&-right {
+		@include span(5 of 12 last);
+
+		background-image:url('../assets/images/dog_image.jpg');
+		background-size:cover;
+		background-position:50% 50%;
+
+		overflow:hidden;
+
+		img {
+			display:block;
+		}
+
+		.portrait {
+			img {
+				width:100%;
+			}
+		}
+	}
+}
+
+.drop-box {
+    background: #F8F8F8;
+	border: 1px dashed #DDD;
+	width: auto;
+	height: 70px;
+	text-align: center;
+	padding-top: 25px;
+
+	&--subtitle {
+		color: #9A9A9A;
+		font-size: 0.7em;
+		text-transform: uppercase;
+		padding: 15px 0;
+	}
+}
+.dragover {
+    border: 1px dashed #5A43FA;
+}

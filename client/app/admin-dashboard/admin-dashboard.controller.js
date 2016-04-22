@@ -8,14 +8,13 @@
 
             this.$location = $location;
             this.$http = $http;
-
             this.title = "The Dashboard";
 
-            this.onFire();
+            this.onInit();
 
         }
 
-        onFire() {
+        onInit(){
             this.$http.get('/api/animal').then(response => {
                 console.log('Animals repsonse is', response);
                 // this.awesomeThings = response.data;

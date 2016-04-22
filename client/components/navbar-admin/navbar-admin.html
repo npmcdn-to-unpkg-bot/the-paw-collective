@@ -1,0 +1,33 @@
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#" class="logo-link">Animal Collective</a>
+        </div>
+        <div class="avatar" admin-dashboard>
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" class="avatar-image">
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-caret"></div>
+            <ul>
+                <a href="/" class="dropdown-items">
+                    <li>View Website</li>
+                </a>
+                <a href="/admin" class="dropdown-items">
+                    <li>Admin</li>
+                </a>
+                <a href="/logout" class="dropdown-items">
+                    <li>Log Out</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="subhead">
+    <div class="container">
+        <h1 class="subhead-title">{{navadmin.title}}</h1>
+        <div class="subhead-menu">
+            <a href="/admin-dashboard" ng-class="{ active: navadmin.isActive('/admin-dashboard')}">Animals</a>
+            <a href="#" ng-class="{active: navadmin.isActive('/admin-interviews')}">Interviews</a>
+        </div>
+    </div>
+</section>  

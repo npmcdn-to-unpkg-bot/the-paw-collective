@@ -5,10 +5,12 @@ angular.module('animalCollectiveApp', [
   'animalCollectiveApp.admin',
   'animalCollectiveApp.constants',
   'animalCollectiveApp.dashboard',
+  'animalCollectiveApp.animals',
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngFileUpload',
   'validation.match'
 ])
   .config(function($routeProvider, $locationProvider) {

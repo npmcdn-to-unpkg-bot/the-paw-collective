@@ -1,0 +1,14 @@
+<navbar-admin></navbar-admin>
+<section class="create-animal-box">
+    <div class="container">
+        <div class="create-animal-box-left">
+            <input type="text" placeholder="Name" class="ac-label default">
+            <input type="text" placeholder="Instagram ID" class="ac-label default">
+            <input type="text" placeholder="Category" class="ac-label default">
+            <p class="drop-box--subtitle">Photo of the animal</p>
+            <div ngf-drop ngf-select ng-model="file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">Drag and drop your image here or click to select your image</div>
+        </div>
+        <div ngf-background="file || 'http://bhspa.com/wp-content/uploads/2013/04/placeholder1.jpg'" class="create-animal-box-right portrait">
+        </div>
+    </div>
+</section>

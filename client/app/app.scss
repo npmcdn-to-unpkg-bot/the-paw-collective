@@ -8,22 +8,23 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
-$susy: (
-  global-box-sizing: content-box,
-  debug: (
-    image: hide,
-    color: rgba(#66f, .25),
-    output: background,
-    toggle: top right,
-  ),
-  use-custom: (
-    background-image: true,
-    background-options: false,
-    box-sizing: true,
-    clearfix: false,
-    rem: true,
-  )
-);
+// $susy: (
+//   global-box-sizing: content-box,
+//   debug: (
+//     image: hide,
+//     color: rgba(#66f, .25),
+//     output: background,
+//     toggle: top right,
+//   ),
+//   use-custom: (
+//     background-image: true,
+//     background-options: false,
+//     box-sizing: true,
+//     clearfix: false,
+//     rem: true,
+//   )
+// );
+
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -41,6 +42,7 @@ $susy: (
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'admin-animal/admin-animal.scss';
 @import 'admin-dashboard/admin-dashboard.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';

@@ -5,17 +5,13 @@
 	&-title {
 		font-size:2.5em;
 		font-weight:700;
-
 		padding-bottom: 10px;
 	}
 
 	&-menu {
-
 		border-bottom:1px solid #E9E9E9;
 		padding: 20px 0;
-
 		> a {
-			
 			font-size:1.1em;
 			padding-bottom: 18px;
 			margin-right:20px;
@@ -29,14 +25,20 @@
 }
 
 .three-dots-menu {
+
+
 	float:left;
 	position:relative;
+
 	top:3px;
 	right: -2.6em;
+	
 	padding:1em;
 	margin:-1em;
+	
 	visibility:hidden;
 	opacity:0;
+
 	@include transition(opacity 0.2s ease-in);
 	
 	ul > {
@@ -74,16 +76,9 @@ svg #search-icon {
 	fill:#9C9C9C;
 }
 
-.slide-right {
-	
-	@include transition(opacity 0.2s ease-in);
-	visibility:visible;
-	opacity:1;
-}
-
 .fade-in {
-	opacity:1;
 	@include transition(opacity 0.2s ease-in);
+	opacity:1;
 	visibility:visible;
 }
 
@@ -126,8 +121,6 @@ svg #search-icon {
 		height:88px;
 		padding:0 1em;
 
-
-
 		@include display(flex);
     	@include flex-direction(row);
     	@include align-items(center);
@@ -145,7 +138,6 @@ svg #search-icon {
 
 		&--button {
 			margin-left:auto;
-
 		}
 
 
