@@ -42,6 +42,7 @@
 	ul > {
 		li {
 			padding-right:10px;
+			padding-left:10px;
 			display:inline-block;
 			cursor:pointer;
 		}
@@ -59,6 +60,18 @@ svg.three-dots {
 svg #three-dots {
 	@include transition(opacity 0.2s ease-in);
 	opacity:1;
+}
+
+svg #edit-icon {
+	fill:blue;
+}
+
+svg #delete-icon {
+	fill:red;
+}
+
+svg #search-icon {
+	fill:#9C9C9C;
 }
 
 .slide-right {
@@ -96,14 +109,45 @@ svg #three-dots {
         	@include align-items(center);
 
         	
-        	&:nth-child(even) {
+        	&:nth-child(odd) {
         		background:#EDEDED;
         	}
 
-        	&:nth-child(odd) {
+        	&:nth-child(even) {
         		background:white;
         	}
 		}
+
+	}
+
+	&-header {
+
+		background:white;
+		height:88px;
+		padding:0 1em;
+
+
+
+		@include display(flex);
+    	@include flex-direction(row);
+    	@include align-items(center);
+
+		&--search, &--button {
+			display:inline-block;
+		}
+
+		&--search {
+			width:50%;
+			span {
+				padding:0 20px;
+			}
+		}
+
+		&--button {
+			margin-left:auto;
+
+		}
+
 
 	}
 
