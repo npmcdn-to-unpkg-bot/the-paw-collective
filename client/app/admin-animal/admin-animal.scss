@@ -62,3 +62,9 @@
 .dragover {
     border: 1px dashed #5A43FA;
 }
+
+.progress-indicator {
+	&--text {
+		display:inline-block;
+	}
+}

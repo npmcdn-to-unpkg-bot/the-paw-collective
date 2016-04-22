@@ -5,9 +5,9 @@
             <!-- Left Box -->
             <div class="create-animal-box-left">
                 <form name="addAnimalForm">
-                    <input type="text" ng-model="animal.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
-                    <input type="text" ng-model="animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
-                    <select ng-model="animal.category" ng-options="days.indexOf(i) as i for i in adminAnimal.categories">
+                    <input type="text" ng-model="adminAnimal.animal.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
+                    <input type="text" ng-model="adminAnimal.animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
+                    <select ng-model="adminAnimal.animal.category" ng-options="days.indexOf(i) as i for i in adminAnimal.categories">
                     </select>
                     <p class="drop-box--subtitle">Photo of the animal</p>
                     <div ngf-drop ngf-select ng-model="adminAnimal.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
@@ -28,7 +28,8 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
-                    <button class="ac-button" ng-disabled="addAnimalForm.$invalid" ng-click="adminAnimal.upload(animal)">SAVE</button>
+                    <button class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(adminAnimal.animal)">SAVE</button>
+                    <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
                 </form>
             </div>
             <!-- Right Box -->
