@@ -22,7 +22,6 @@
 	&-right {
 		@include span(5 of 12 last);
 
-		@include transition(background-image 0.5s ease-in-out);
 		background-size:cover;
 		background-position:50% 50%;
 		overflow:hidden;

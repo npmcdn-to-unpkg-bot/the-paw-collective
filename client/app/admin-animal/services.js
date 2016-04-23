@@ -11,10 +11,15 @@ angular.module('animalCollectiveApp.animals')
         }
 
         this.findAPI = (id, cb) => {
-        	$http.get('/api/animal/' + id + '').then(cb)
+            $http.get('/api/animal/' + id + '').then(cb)
         }
 
-        this.updateAPI = (animal, file, cb) => {
+        // Upload Image Module
+        this.uploadImage = (file, cb) => {
+            // Upload Image Here
+            // Return the results
+
+            console.log('the image trying to upoad', file)
 
             Upload.upload({
                 url: 'api/image-uploads',
@@ -23,32 +28,48 @@ angular.module('animalCollectiveApp.animals')
                     'username': 'user-animal'
                 }
             }).then((resp) => {
-                console.log('The response is', resp.data.url)
-                animal.image = resp.data.url
-
-                // Make a post with data (Animal)
-                let request = $http.post('/api/animal', animal)
-                this.queue.push(request)
-
-                return $q.all(this.queue).then(cb)
-
+                return $q.resolve(resp.data.url).then(cb)
             }, (resp) => {
                 console.log('Error status: ' + resp.status)
             }, (evt) => {
                 let progressPercentage = parseInt(100.0 * evt.loaded / evt.total)
                 this.exporting = true
             })
-
         }
 
-        this.editAPI = (animal) => {
-            let queue = []
-            let request = $http.post('/api/animals/' + animal._id + '', animal)
+        this.updateAPI = (animal, file, cb) => {
 
-            queue.push(request)
+            // Make a post with data (Animal)
+            this.uploadImage(file, (result) => {
+                animal.image = result
+                let request = $http.post('/api/animal', animal)
+                this.queue.push(request)
 
-            return $q.all(queue).then((result) => {
-                console.log('the animal has been updated!')
+                return $q.all(this.queue).then(cb)
             })
         }
+
+        this.editAPI = (id, animal, imageFile, cb) => {
+            let queue = []
+
+            if (imageFile !== animal.data.image) {
+                console.log('image does not match!!!')
+
+                this.uploadImage(imageFile, (result) => {
+                    animal.image = result
+                    $http.put('/api/animal/' + id + '', animal)
+                })
+
+            } else {
+                $http.put('/api/animal/' + id + '', animal)
+            }
+        }
+
+        this.animals = [{
+            text: 'Dog'
+        }, {
+            text: 'Cat'
+        }, {
+            text: 'Others'
+        }];
     });

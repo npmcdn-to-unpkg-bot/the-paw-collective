@@ -44,7 +44,7 @@ function removeEntity(res) {
 function handleEntityNotFound(res) {
     return function(entity) {
         if (!entity) {
-            res.status(404).end()
+            res.status(404).end() 
             return null
         }
         return entity
@@ -75,6 +75,7 @@ export function show(req, res) {
 
 // Creates a new Animals in the DB
 export function create(req, res) {
+    console.log('creating')
     return Animals.create(req.body)
         .then(respondWithResult(res, 201))
         .catch(handleError(res))
