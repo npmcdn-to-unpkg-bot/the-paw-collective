@@ -1,58 +1,149 @@
 @mixin meyer-reset {
-  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-  }
-
-  // HTML5 display-role reset for older browsers
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ol, ul {
-    list-style: none;
-  }
-  blockquote, q {
-    quotes: none;
-  }
-  blockquote {
-    &:before, &:after {
-      content: "";
-      content: none;
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
     }
-  }
-  q {
-    &:before, &:after {
-      content: "";
-      content: none;
+    // HTML5 display-role reset for older browsers
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
     }
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
+    body {
+        line-height: 1;
+    }
+    ol,
+    ul {
+        list-style: none;
+    }
+    blockquote,
+    q {
+        quotes: none;
+    }
+    blockquote {
+        &:before,
+        &:after {
+            content: "";
+            content: none;
+        }
+    }
+    q {
+        &:before,
+        &:after {
+            content: "";
+            content: none;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
 }
 
 @include meyer-reset;
-
-
 input::ms-clear,
 input[type="password"]::ms-reveal {
-  display: none;
+    display: none;
 }
 
 input[type="search"]::-webkit-search-decoration {
-  display: none;
+    display: none;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 0;
+    margin: 0;
 }
 
 button,
@@ -61,58 +152,54 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"],
 input[type="image"] {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  overflow: visible;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: top;
-  text-align: center;
-  text-decoration: none;
-  width: auto;
-
-  // Undo WebKit defaults
-  -webkit-appearance: none;
-
-  // Adjust background display
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-
-  // Remove rounded corners
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-
-  // Change box model
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  // Helvetica Neue present, because it works better
-  // for line-height on buttons than Arial, on OS X.
-  
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    // Undo WebKit defaults
+    -webkit-appearance: none;
+    // Adjust background display
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    // Remove rounded corners
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    // Change box model
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    // Helvetica Neue present, because it works better
+    // for line-height on buttons than Arial, on OS X.
 }
 
 button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
-  // Firefox has this in its user-agent (?)
-  // stylesheet, so let's just roll with it.
-  //
-  // http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal
-  //
-  // http://cssnewbie.com/input-button-line-height-bug
-  //
-  line-height: normal !important;
+    // Firefox has this in its user-agent (?)
+    // stylesheet, so let's just roll with it.
+    //
+    // http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal
+    //
+    // http://cssnewbie.com/input-button-line-height-bug
+    //
+    line-height: normal !important;
 }
 
+//FORM RESET
 textarea,
 select,
+input,
 input[type="date"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -126,106 +213,26 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  background: none;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  text-align: left;
-  vertical-align: top;
-
-
-  // Leaving out Helvetica Neue, to not throw off size="..."
-  // on inputs. Arial is more reliable, on Windows and OS X.
-  
-
-  // Undo WebKit defaults
-  -webkit-appearance: none;
-
-  // Adjust background display
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-
-  // Remove rounded corners
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-
-  // Change box model
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  // Get rid of up/down, plus/minus buttons
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border:none;
+    -o-border-radius: 0;
+    border-radius: 0;
     -webkit-appearance: none;
-  }
+    outline: 0;
+    vertical-align: middle;
 }
 
-button[disabled],
-input[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled] {
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
-  cursor: default;
-
-  // Opacity.
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
-  opacity: 0.25;
-}
-
-textarea {
-  min-height: 50px;
-  overflow: auto;
-  resize: vertical;
-  width: 100%;
-}
-
-optgroup {
-  font-style: normal;
-  font-weight: normal;
-
-}
-
-// For IE
-select::-ms-expand {
-  // Get rid of drop-down arrow
-  display: none;
-}
-
-// For Firefox
-@-moz-document url-prefix() {
-  input,
-  button,
-  select,
-  textarea {
-    // Suppress red glow that Firefox
-    // adds to form fields by default,
-    // even when user is still typing.
-    &:invalid {
-      -moz-box-shadow: none;
-      box-shadow: none;
-    }
-
-    // Kill phantom spacing and dotted
-    // border that appears in Firefox.
-    &::-moz-focus-inner {
-      border: 0;
-      padding: 0;
-    }
-  }
-
-  // Get rid of drop-down arrow
-  select {
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: "";
-  }
+select,
+select,
+select {
+    background-repeat: no-repeat;
+    background-position: 97% center;
 }

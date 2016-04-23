@@ -17,9 +17,10 @@ function uploadFileToCloud(req, res, next) {
     // Check first if the image is from the web
     if (req.body.file) {
         // This means the image is from instagram
+        console.log('web photo')
         uploadToCloudinary(req.body.file, res, next)
     } else {
-        uploadToCloudinary(req.files.file, res, next)
+        uploadToCloudinary(req.files.file.path, res, next)
     }
 }
 

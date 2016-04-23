@@ -1,20 +1,21 @@
 'use strict';
+
 (function() {
 
-    class AdminAnimalComponent {
-        constructor($http, $q, Upload, $scope) {
+    class adminAnimalComponent {
+        constructor($http, $q, adminAnimalDataService) {
             this.$http = $http
             this.$q = $q
-            this.$scope = $scope
-            this.Upload = Upload
-            this.queue = []
             this.animal = {}
+            this.adminAnimalDataService = adminAnimalDataService
 
-            // List of Animal Categories
-            this.categories = ['Dog', 'Cat', 'Others']
-
-            // Set the default category choice
-            this.category = 0
+            this.animalCategory = [{
+                text: 'Dog'
+            }, {
+                text: 'Cat'
+            }, {
+                text: 'Others'
+            }];
         }
 
         upload(animal) {
@@ -24,36 +25,36 @@
                 return
             }
 
-            this.Upload.upload({
-                url: 'api/image-uploads',
-                data: {
-                    file: this.file,
-                    'username': 'username-example'
-                }
-            }).then((resp) => {
-                console.log('The response is', resp.data.url)
-                animal.image = resp.data.url
+            console.log(animal)
+          
 
-                // Make a post with Data (animal)
-                let request = this.$http.post('/api/animal', animal)
-                this.queue.push(request)
-
-                console.log('Success' + resp.config.data.file.name + 'uploaded.  Response:' + resp.data)
-                this.indicatorStatus = 'Animal has successfully added!'
+            this.indicatorStatus = 'saving'
+            this.adminAnimalDataService.updateAPI(animal, this.file, (result) => {
+                console.log('The result is', result)
+                this.indicatorStatus = 'finished'
                 this.animal = {}
+                this.animal.category='Dog'
+            })
 
-                return this.$q.all(this.queue).then((result) => {
-                    console.log('the animal has been added')
-                })
+        }
+    }
 
-            }, (resp) => {
-                console.log('Error status: ' + resp.status)
-            }, (evt) => {
-                let progressPercentage = parseInt(100.0 * evt.loaded / evt.total)
-                console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name)
+    class adminAnimalEdit {
+        constructor($http, $routeParams, adminAnimalDataService) {
+            this.$http = $http
+            this.$routeParams = $routeParams
+            this.adminAnimalDataService = adminAnimalDataService
+            this.animal = {}
 
-                this.indicatorStatus = 'Saving...'
-                this.exporting = true
+            this.onInit()
+        }
+
+        onInit() {
+            this.adminAnimalDataService.findAPI(this.$routeParams.id, (result) => {
+                console.log(result)
+                this.animal.name = result.data.name
+                this.animal.instagram = result.data.instagram
+
             })
         }
 
@@ -61,6 +62,7 @@
     }
 
     angular.module('animalCollectiveApp.animals')
-        .controller('AdminAnimalComponent', AdminAnimalComponent)
+        .controller('adminAnimalComponent', adminAnimalComponent)
+        .controller('adminAnimalEdit', adminAnimalEdit)
 
 })()
