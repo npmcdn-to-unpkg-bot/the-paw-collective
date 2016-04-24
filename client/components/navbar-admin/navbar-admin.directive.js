@@ -44,14 +44,19 @@ angular.module('animalCollectiveApp')
 	        restrict: 'EA',
 	        link: (scope, elem, attrs) => {
 
+	        	// elem is the 'three circle svg'
+
+				// menu is the 'edit/delete button' 
 	            let menu = angular.element(elem.parent().children()[0])
 
+				// When you hover over the three-circles, the three circles 
+				// should fade out, and the 'edit/delete button' should fade-in
 	            elem.bind('mouseenter', () => {
 
-	                // Slide Out Button
+	                // fade out three circles
 	                elem.addClass('fade-out')
 
-	                // Slide In Menu
+	                // fade in 'edit/delete'
 	                menu.addClass('fade-in')
 	            })
 
@@ -59,7 +64,6 @@ angular.module('animalCollectiveApp')
 	                elem.removeClass('fade-out')
 	                menu.removeClass('fade-in')
 	            })
-
 	        }
 	    }
 	})

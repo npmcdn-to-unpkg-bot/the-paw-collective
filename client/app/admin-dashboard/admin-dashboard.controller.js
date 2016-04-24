@@ -4,10 +4,11 @@
 
     class AdminDashboardController {
 
-        constructor($http, $location) {
+        constructor($http, $location, $route) {
 
             this.$location = $location
             this.$http = $http
+            this.$route = $route
             this.title = "The Dashboard"
 
             this.onInit()
@@ -20,14 +21,10 @@
         }
 
         remove(animal) {
-            let result = confirm('You sure you want to delete?')
+            this.$http.delete(`/api/animal/${animal._id}`)
 
-            if (result) {
-                this.$http.delete(`/api/animal/${animal._id}`)
-
-                let index = this.animalCollections.indexOf(animal)
-                this.animalCollections.splice(index, 1)
-            }
+            let index = this.animalCollections.indexOf(animal)
+            this.animalCollections.splice(index, 1)
         }
 
         isActive(route) {

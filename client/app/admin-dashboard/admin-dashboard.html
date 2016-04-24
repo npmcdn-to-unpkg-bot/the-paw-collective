@@ -18,7 +18,7 @@
                         </g>
                     </svg>
                 </span>
-                    <input class="ac-label" type="text" placeholder="Search">
+                    <input class="ac-label" type="text" placeholder="Search" ng-model="searchText">
                 </div>
                 <div class="animal-list-header--button">
                     <a class="ac-button" href="/admin-dashboard/create-animal">ADD ANIMAL</a>
@@ -26,7 +26,7 @@
             </div>
             <div class="animal-list-box">
                 <ul>
-                    <li class="animal-list-box--items" ng-repeat="animal in adminDashboard.animalCollections | orderBy:'name'">
+                    <li class="animal-list-box--items" ng-repeat="animal in adminDashboard.animalCollections | filter: searchText | orderBy:'name'">
                         <img class="animal-list-avatar" ng-src="{{animal.image}}" alt="">
                         <div class="animal-list-info">
                             <p class="animal-list-info--name">{{animal.name}}</p>
