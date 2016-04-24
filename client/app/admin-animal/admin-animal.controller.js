@@ -42,7 +42,7 @@
 
         onInit() {
             this.adminAnimalDataService.findAPI(this.$routeParams.id, (result) => {
-                
+                console.log('On init')
                 this.animal = result
 
                 this.animal.name = result.data.name

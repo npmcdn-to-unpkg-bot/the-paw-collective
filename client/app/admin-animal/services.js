@@ -11,14 +11,12 @@ angular.module('animalCollectiveApp.animals')
         }
 
         this.findAPI = (id, cb) => {
-            $http.get('/api/animal/' + id + '').then(cb)
+            $http.get(`/api/animal/${id}`).then(cb)
         }
 
         // Upload Image Module
         this.uploadImage = (file, cb) => {
             // Upload Image Here
-            // Return the results
-
             console.log('the image trying to upoad', file)
 
             Upload.upload({
@@ -57,11 +55,11 @@ angular.module('animalCollectiveApp.animals')
 
                 this.uploadImage(imageFile, (result) => {
                     animal.image = result
-                    $http.put('/api/animal/' + id + '', animal)
+                    $http.put(`/api/animal/${id}`, animal)
                 })
 
             } else {
-                $http.put('/api/animal/' + id + '', animal)
+                $http.put(`/api/animal/${id}`, animal)
             }
         }
 
