@@ -15,10 +15,19 @@
 
         onInit() {
             this.$http.get('/api/animal').then(response => {
-                console.log('Animals repsonse is', response);
-
                 this.animalCollections = response.data
             })
+        }
+
+        remove(animal) {
+            let result = confirm('You sure you want to delete?')
+
+            if (result) {
+                this.$http.delete(`/api/animal/${animal._id}`)
+
+                let index = this.animalCollections.indexOf(animal)
+                this.animalCollections.splice(index, 1)
+            }
         }
 
         isActive(route) {

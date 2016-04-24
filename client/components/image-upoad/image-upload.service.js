@@ -21,7 +21,6 @@
                 this.exporting = true
             })
         }
-
     }
 
     angular.module('animalCollectiveApp.animals')

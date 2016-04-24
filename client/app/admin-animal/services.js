@@ -1,9 +1,8 @@
 'use strict';
 
-angular.module('animalCollectiveApp.animals')
-    .service('adminAnimalDataService', function($http, $q, Upload, imageUploader) {
-        // AngularJS will instantiate a singleton by calling "new" on this function
+(function() {
 
+    function adminAnimalDataService($http, $q, Upload, imageUploader) {
         this.queue = []
 
         this.getAPI = (cb) => {
@@ -48,4 +47,9 @@ angular.module('animalCollectiveApp.animals')
         }, {
             text: 'Others'
         }];
-    });
+    }
+
+    angular.module('animalCollectiveApp.animals')
+        .service('adminAnimalDataService', adminAnimalDataService)
+
+})()
