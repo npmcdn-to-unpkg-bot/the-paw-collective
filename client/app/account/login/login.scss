@@ -1,0 +1,52 @@
+.login {
+	
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+
+	height:100vh;
+
+	&-wrapper {
+	
+	}
+
+	&-box {
+		background:white;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		border-radius:5px;
+		display:inline-block;
+		padding:30px 50px;
+		width:450px;
+	}
+
+	h1,p  {
+		text-align:center;
+	}
+
+	h1 {
+		color:#4D5CF9;
+		font-size:2em;
+		padding-bottom:15px;
+	}
+
+	&-subtitle {
+		padding-bottom:10px;
+		color: rgba(4, 4, 5, 0.38);
+		font-size:0.9em;
+	}
+
+	&-help-block {
+		padding:10px 0;
+		color: rgba(255, 14, 41, 0.45);
+		font-size:0.9em;
+	}
+
+	&-check {
+		padding:20px 0;
+		color: rgba(4, 4, 5, 0.38);
+		font-size:0.9em;
+		&--signup {
+			color: #4D5CF9;
+		}
+	}
+}

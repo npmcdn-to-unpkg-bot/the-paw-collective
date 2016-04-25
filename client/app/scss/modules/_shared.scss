@@ -17,6 +17,11 @@ input.ac-button, .ac-button {
     &:disabled {
         opacity:0.3;
     }
+
+    &.login {
+        width:100%;
+        height:auto;
+    }
 }
 
 .ac-label {
