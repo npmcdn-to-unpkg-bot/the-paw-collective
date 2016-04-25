@@ -4,7 +4,7 @@ public
 .sass-cache
 .idea
 client/bower_components
-dist
+dist/client/bower_components
 /server/config/local.env.js
 npm-debug.log
 coverage

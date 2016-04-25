@@ -1,0 +1,17 @@
+'use strict';
+
+// Use local.env.js for environment variables that grunt will set when the server starts locally.
+// Use for your api keys, secrets, etc. This file should not be tracked by git.
+//
+// You will need to set these on the server you deploy to.
+
+module.exports = {
+    DOMAIN: 'http://localhost:9000',
+    SESSION_SECRET: 'animalcollective-secret',
+    // Control debug level for modules using visionmedia/debug
+    DEBUG: '',
+    CLOUD_NAME: 'dxntynw7w',
+    CLOUD_API_KEY: '531319976959239',
+    CLOUD_API_SECRET: 'tB11Ysry5Txmm-wlw6gzfZHhdvk'
+};
+//# sourceMappingURL=local.env.js.map
