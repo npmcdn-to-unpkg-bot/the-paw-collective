@@ -17,6 +17,8 @@ class NavbarAdminController {
         this.getCurrentUser = Auth.getCurrentUser
 
         this.title = "Create an animal"
+
+        this.userEmail = this.getCurrentUser().email
     }
 
     isActive(route) {

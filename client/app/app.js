@@ -11,6 +11,7 @@ angular.module('animalCollectiveApp', [
         'ngSanitize',
         'ngRoute',
         'ngFileUpload',
+        'ui.gravatar',
         'validation.match'
     ])
     .config(function($routeProvider, $locationProvider) {
