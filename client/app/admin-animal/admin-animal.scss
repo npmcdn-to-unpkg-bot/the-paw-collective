@@ -17,6 +17,12 @@
 		.ac-button {
 			margin:20px 0;
 		}
+
+		&--status {
+			@include display(flex);
+        	@include flex-direction(row);
+        	@include align-items(center);
+		}
 	}
 
 	&-right {
@@ -68,5 +74,6 @@
 .progress-indicator {
 	&--text {
 		display:inline-block;
+		padding-left: 20px;
 	}
 }

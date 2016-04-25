@@ -7,7 +7,7 @@
                 <form name="addAnimalForm">
                     <input type="text" ng-model="adminAnimal.animal.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
                     <input type="text" ng-model="adminAnimal.animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
-                     <select id="limitType" name="limit" ng-model="adminAnimal.animal.category" ng-options="v.text as v.text for v in adminAnimal.animalCategory" ng-init="adminAnimal.animal.category='Dog'"></select>
+                    <select id="limitType" name="limit" ng-model="adminAnimal.animal.category" ng-options="v.text as v.text for v in adminAnimal.animalCategory" ng-init="adminAnimal.animal.category='Dog'"></select>
                     <p class="drop-box--subtitle">Photo of the animal</p>
                     <div ngf-drop ngf-select ng-model="adminAnimal.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,9 +27,10 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
-                 <!--    <input type="text" ng-model="adminAnimal.file" placeholder="(optional) URL of the Image" class="ac-label default"> -->
-                    <button class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(adminAnimal.animal)">SAVE</button>
-                    <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
+                    <div class="create-animal-box-left--status">
+                        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(adminAnimal.animal)">
+                        <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
+                    </div>
                 </form>
             </div>
             <!-- Right Box -->

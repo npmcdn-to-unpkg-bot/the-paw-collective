@@ -3,9 +3,10 @@
 (function() {
 
     class adminAnimalComponent {
-        constructor($http, $q, adminAnimalDataService) {
+        constructor($http, $q, $interval, adminAnimalDataService) {
             this.$http = $http
             this.$q = $q
+            this.$interval = $interval
             this.animal = {}
             this.adminAnimalDataService = adminAnimalDataService
 
@@ -19,12 +20,20 @@
                 return
             }
 
-            this.indicatorStatus = 'saving'
+            this.indicatorStatus = 'Saving...'
+            this.exporting = true
+
             this.adminAnimalDataService.updateAPI(animal, this.file, (result) => {
                 console.log('The result is', result)
-                this.indicatorStatus = 'finished'
+                this.indicatorStatus = 'Finished!'
+                this.exporting = false
                 this.animal = {}
                 this.animal.category = 'Dog'
+
+                // After 2 seconds, set the status to an empty string
+                this.$interval(() => {
+                    this.indicatorStatus = ''
+                },2000)
             })
         }
     }

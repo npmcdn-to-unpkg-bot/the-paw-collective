@@ -33,10 +33,13 @@
                 imageUploader.uploadImage(imageFile, (result) => {
                     animal.image = result
                     $http.put(`/api/animal/${id}`, animal)
+
+                    return $q.resolve(result).then(cb)
                 })
 
             } else {
                 $http.put(`/api/animal/${id}`, animal)
+                return $q.resolve(animal).then(cb)
             }
         }
 

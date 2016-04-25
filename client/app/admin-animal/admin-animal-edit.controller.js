@@ -7,9 +7,10 @@
             this.$http = $http
             this.$routeParams = $routeParams
             this.adminAnimalDataService = adminAnimalDataService
+            
             this.animal = {}
+            this.animalCategory = adminAnimalDataService.animals
 
-            this.animalCategory = adminAnimalDataService.animals;
             this.onInit()
         }
 
@@ -27,8 +28,10 @@
 
         upload(animal) {
 
+            this.indicatorStatus = 'Saving...'
             this.adminAnimalDataService.editAPI(this.$routeParams.id, animal, this.file, (result) => {
                 console.log('something happened good', result)
+                this.indicatorStatus = 'Finished!'
             })
         }
     }
