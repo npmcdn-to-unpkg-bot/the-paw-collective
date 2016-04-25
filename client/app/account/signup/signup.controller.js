@@ -23,7 +23,7 @@ class SignupController {
                 })
                 .then(() => {
                     // Account created, redirect to home
-                    this.$location.path('/')
+                    this.$location.path('/admin-dashboard')
                 })
                 .catch(err => {
                     err = err.data

@@ -19,20 +19,19 @@
 		width:450px;
 	}
 
-	h1,p  {
-		text-align:center;
-	}
 
 	h1 {
 		color:#4D5CF9;
 		font-size:2em;
 		padding-bottom:15px;
+		text-align:center;
 	}
 
 	&-subtitle {
 		padding-bottom:10px;
 		color: rgba(4, 4, 5, 0.38);
 		font-size:0.9em;
+		text-align:center;
 	}
 
 	&-help-block {
