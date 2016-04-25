@@ -13,9 +13,9 @@
             $http.get(`/api/animal/${id}`).then(cb)
         }
 
-        this.updateAPI = (animal, file, cb) => {
+        this.updateAPI = (animal, croppedUrl, file, cb) => {
 
-            imageUploader.uploadImage(file, (result) => {
+            imageUploader.uploadImage(file, croppedUrl, (result) => {
                 animal.image = result
                 let request = $http.post('/api/animal', animal)
                 this.queue.push(request)

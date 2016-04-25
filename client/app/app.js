@@ -11,6 +11,7 @@ angular.module('animalCollectiveApp', [
         'ngSanitize',
         'ngRoute',
         'ngFileUpload',
+        'ngImgCrop',
         'ui.gravatar',
         'validation.match'
     ])

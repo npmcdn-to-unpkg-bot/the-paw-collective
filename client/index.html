@@ -10,6 +10,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -20,11 +21,10 @@
 </head>
 
 <body ng-app="animalCollectiveApp">
-    <!-- Add your site or application content here -->
 <!--     <navbar></navbar>
  -->    <div ng-view=""></div>
 <!--     <footer></footer>
- -->    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+ -->
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -52,6 +52,7 @@
     <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/angular-gravatar/build/angular-gravatar.js"></script>
+    <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->

@@ -45,7 +45,7 @@ export function create(req, res, next) {
      * to change role to Admin
      */
 
-    if (newUser.email === 'yuujin.lee@gmail.com') {
+    if (newUser.email === 'genaleelosch@gmail.com') {
         newUser.role = 'admin'
     }
 

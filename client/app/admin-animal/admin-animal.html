@@ -27,8 +27,12 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
+                    <div ngf-drop ng-model="adminAnimal.file" ngf-pattern="image/*" class="cropArea">
+                            <img-crop image="adminAnimal.file  | ngfDataUrl" area-type="square" result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+                            </img-crop>
+                        </div>
                     <div class="create-animal-box-left--status">
-                        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(adminAnimal.animal)">
+                        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(croppedDataUrl, adminAnimal.animal)">
                         <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
                     </div>
                 </form>

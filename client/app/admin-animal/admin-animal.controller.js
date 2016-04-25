@@ -13,8 +13,8 @@
             this.animalCategory = adminAnimalDataService.animals;
         }
 
-        upload(animal) {
-
+        upload(croppedUrl, animal) {
+            
             if (!this.file) {
                 alert('You need to upload an image')
                 return
@@ -23,7 +23,7 @@
             this.indicatorStatus = 'Saving...'
             this.exporting = true
 
-            this.adminAnimalDataService.updateAPI(animal, this.file, (result) => {
+            this.adminAnimalDataService.updateAPI(animal, croppedUrl, this.file, (result) => {
                 console.log('The result is', result)
                 this.indicatorStatus = 'Finished!'
                 this.exporting = false
