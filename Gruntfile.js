@@ -421,6 +421,12 @@ module.exports = function (grunt) {
           remote: 'openshift',
           branch: 'master'
         }
+      },
+      digitalocean: {
+        options: {
+          remote: 'ssh://root@107.170.45.112:/root/git/animal.git',
+          branch: 'master'
+        }
       }
     },
 
