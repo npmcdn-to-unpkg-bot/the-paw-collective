@@ -9,7 +9,7 @@
                     <input type="text" ng-model="adminAnimal.animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
                     <select id="limitType" name="limit" ng-model="adminAnimal.animal.category" ng-options="v.text as v.text for v in adminAnimal.animalCategory" ng-init="adminAnimal.animal.category='Dog'"></select>
                     <p class="drop-box--subtitle">Photo of the animal</p>
-                    <div ngf-drop ngf-select ng-model="adminAnimal.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
+                    <div ngf-drop ngf-change="adminAnimal.imageDropped()" ngf-select ng-model="adminAnimal.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs></defs>
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -27,10 +27,10 @@
                         </svg>
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
-                    <div ngf-drop ng-model="adminAnimal.file" ngf-pattern="image/*" class="cropArea">
-                            <img-crop image="adminAnimal.file  | ngfDataUrl" area-type="square" result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
-                            </img-crop>
-                        </div>
+                    <div ngf-drop ng-model="adminAnimal.file" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : adminAnimal.removeImagePlaceholder}">
+                        <img-crop image="adminAnimal.file  | ngfDataUrl" area-type="square" result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+                        </img-crop>
+                    </div>
                     <div class="create-animal-box-left--status">
                         <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(croppedDataUrl, adminAnimal.animal)">
                         <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
@@ -38,7 +38,7 @@
                 </form>
             </div>
             <!-- Right Box -->
-            <div ngf-background="adminAnimal.file || '../assets/images/dog_image.jpg'" class="create-animal-box-right portrait">
+            <div class="create-animal-box-right portrait">
             </div>
         </div>
     </div>

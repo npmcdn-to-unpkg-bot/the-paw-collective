@@ -10,7 +10,11 @@
             this.animal = {}
             this.adminAnimalDataService = adminAnimalDataService
 
-            this.animalCategory = adminAnimalDataService.animals;
+            this.animalCategory = adminAnimalDataService.animals
+        }
+
+        imageDropped(){
+            this.removeImagePlaceholder = true
         }
 
         upload(croppedUrl, animal) {
@@ -30,6 +34,8 @@
                 this.indicatorStatus = 'Finished!'
                 this.exporting = false
                 this.animal = {}
+                this.file = ''
+                this.removeImagePlaceholder = false
                 this.animal.category = 'Dog'
 
                 // After 2 seconds, set the status to an empty string

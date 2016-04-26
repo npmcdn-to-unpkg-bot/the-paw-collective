@@ -34,9 +34,11 @@ input.ac-button, .ac-button {
 
 	&.default {
 		display:block;
-		padding:15px;
-        background:#F7F7F7;
+		padding: 13px 5px;
+        border-bottom: 1px solid #e1e1e1;
         margin:10px 0;
+        font-size: 0.9em;
+        letter-spacing: 0.07em;
         width:100%;
 	}
 }
