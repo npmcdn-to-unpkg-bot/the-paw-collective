@@ -22,7 +22,7 @@
                 this.animal.name = result.data.name
                 this.animal.instagram = result.data.instagram
                 this.animal.category = result.data.category
-                this.file = result.data.image
+                // this.file = result.data.image
             })
         }
 

@@ -14,6 +14,8 @@
         }
 
         upload(croppedUrl, animal) {
+
+            console.log(croppedUrl)
             
             if (!this.file) {
                 alert('You need to upload an image')
