@@ -1,3 +1,6 @@
+////= Admin Animal Composition Styling
+//======================================================================//
+
 .create-animal-box {
     .container {
         background: white;
@@ -56,7 +59,7 @@
 }
 
 .dragover {
-    border: 1px dashed #5A43FA;
+    border: 1px dashed $primary-color;
 }
 
 .progress-indicator {

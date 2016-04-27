@@ -1,3 +1,6 @@
+////= Main Composition Styling
+//======================================================================//
+
 .homepage {
   @include display(flex);
   @include align-items(center);

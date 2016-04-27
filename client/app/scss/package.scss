@@ -11,17 +11,12 @@
 
 // Base
 @import 'base/reset';
-@import 'base/glyphs';
 @import 'base/core';
 @import 'base/typography';
 
 
 // Layouts
-@import 'layout/header-banner';
 @import 'layout/footer-root';
-@import 'layout/main-principal';
-@import 'layout/article-composition';
-@import 'layout/aside-sidebar';
 @import 'layout/nav-navigation';
 
 // Modules
@@ -30,3 +25,9 @@
 
 // Pages
 @import 'pages/home-page';
+@import 'pages/admin';
+@import 'pages/admin-animal';
+@import 'pages/admin-dashboard';
+@import 'pages/login';
+@import 'pages/signup';
+@import 'pages/main';

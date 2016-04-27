@@ -8,21 +8,11 @@ $clear: transparent !default;
 $black: #000000 !default;
 $red: #FF0000 !default;
 $maroon: #800000 !default;
-$blue: #0000FF !default;
-
-/// Variant and custom colors
-$gallery: #EFEFEF !default;
-$cod-gray: #0B0B0B !default;
-$java: #1FC2C2 !default;
-$pacific-blue: #009DC4 !default;
+$blue: #4D5CF9 !default;
 
 /// Color usage
-$primary-color: $red;
+$primary-color: $blue;
 $secondary-color: $maroon;
-$tertiary-color: $blue;
-$quaternary-color: $pacific-blue;
-$quinary-color: $java;
-$shadow-color: rgba($black, 1);
 
 /// Font size usage
 $lg-font-size: 110%;

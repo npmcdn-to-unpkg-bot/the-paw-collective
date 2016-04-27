@@ -1,3 +1,6 @@
+////= Login Composition Styling
+//======================================================================//
+
 .login {
 	
 	@include display(flex);
@@ -21,7 +24,7 @@
 
 
 	h1 {
-		color:#4D5CF9;
+		color:$primary-color;
 		font-size:2em;
 		padding-bottom:15px;
 		text-align:center;
@@ -47,7 +50,7 @@
 		text-align:center;
 		
 		&--signup {
-			color: #4D5CF9;
+			color: $primary-color;
 		}
 	}
 }
