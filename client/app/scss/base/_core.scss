@@ -1,11 +1,12 @@
 // _core.scss
+
 body {
     font-family: $font-stack-mark;
     background: #F7F7F7;
 }
 
 .container {
-    @include container(80%);
+    @include container();
 }
 
 a {

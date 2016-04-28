@@ -1,0 +1,59 @@
+.interview-list-box {
+    padding: 20px 0;
+    .container {
+        @include container(100%);
+        .gallery {
+            @include full;
+        }
+    }
+    ul {
+        @include clearfix;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.gallery {
+    // List Item
+    &__items {
+        height: auto;
+        border-radius: 3px;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        margin-bottom: gutter(susy-get(columns));
+        @include gallery(3 of 12);
+        @include breakpoint(md) {
+            @include gallery(4 of 12);
+        }
+        @include breakpoint(sm) {
+            @include gallery(12 of 12);
+            float: none;
+        }
+        &--hero {
+            height: 197px;
+            background-image: url('https://s-media-cache-ak0.pinimg.com/736x/07/9a/fc/079afcb7465382ff8d62a19015938ed4.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+            position: relative;
+            img {
+                border-radius: 200%;
+                width: 18%;
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+            }
+        }
+        &--info {
+            padding: 16px;
+            h1 {
+                font-size: 1.2em;
+                font-weight: bolder;
+                padding: 5px 0;
+            }
+            p {
+                font-size: 0.9em;
+                padding: 5px 0;
+            }
+        }
+    }
+}

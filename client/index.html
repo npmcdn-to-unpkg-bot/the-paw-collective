@@ -11,6 +11,8 @@
     <!-- build:css(client) app/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
+    <link rel="stylesheet" href="bower_components/medium-editor/dist/css/medium-editor.css" />
+    <link rel="stylesheet" href="bower_components/medium-editor/dist/css/themes/default.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -53,30 +55,38 @@
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/angular-gravatar/build/angular-gravatar.js"></script>
     <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script src="bower_components/medium-editor/dist/js/medium-editor.js"></script>
+    <script src="bower_components/angular-medium-editor/dist/angular-medium-editor.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->
-    <script src="app/admin-animal/admin-animal.module.js"></script>
-    <script src="app/admin-dashboard/admin-dashboard.module.js"></script>
     <script src="app/admin/admin.module.js"></script>
+    <script src="app/animals/crud-animal/animal.module.js"></script>
+    <script src="app/animals/dashboard/animal-dashboard.module.js"></script>
+    <script src="app/interviews/crud-interview/interviews.module.js"></script>
+    <script src="app/interviews/dashboard/interviews-dashboard.module.js"></script>
     <script src="components/auth/auth.module.js"></script>
     <script src="components/util/util.module.js"></script>
-    <script src="app/main/main.controller.js"></script>
-    <script src="app/account/account.js"></script>
-    <script src="app/admin-animal/admin-animal.router.js"></script>
-    <script src="app/admin-animal/services.js"></script>
-    <script src="app/admin-dashboard/admin-dashboard.controller.js"></script>
+    <script src="app/interviews/dashboard/interviews-dashboard.controller.js"></script>
+    <script src="app/animals/crud-animal/animal.controller.js"></script>
     <script src="app/account/settings/settings.controller.js"></script>
-    <script src="app/admin-dashboard/admin-dashboard.router.js"></script>
-    <script src="app/admin/admin.controller.js"></script>
+    <script src="app/animals/crud-animal/animal.router.js"></script>
+    <script src="app/animals/crud-animal/services.js"></script>
+    <script src="app/animals/dashboard/animal-dashboard.controller.js"></script>
     <script src="app/account/signup/signup.controller.js"></script>
-    <script src="app/admin/admin.router.js"></script>
+    <script src="app/animals/dashboard/animal-dashboard.router.js"></script>
     <script src="app/app.constant.js"></script>
+    <script src="app/interviews/crud-interview/interviews.controller.js"></script>
+    <script src="app/admin/admin.controller.js"></script>
+    <script src="app/interviews/crud-interview/interviews.router.js"></script>
     <script src="app/account/login/login.controller.js"></script>
+    <script src="app/account/account.js"></script>
+    <script src="app/interviews/dashboard/interviews-dashboard.router.js"></script>
+    <script src="app/main/main.controller.js"></script>
     <script src="app/main/main.js"></script>
-    <script src="app/admin-animal/admin-animal-edit.controller.js"></script>
+    <script src="app/admin/admin.router.js"></script>
     <script src="components/auth/auth.service.js"></script>
     <script src="components/auth/interceptor.service.js"></script>
     <script src="components/auth/router.decorator.js"></script>
@@ -88,7 +98,7 @@
     <script src="components/navbar-admin/navbar-admin.directive.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
     <script src="components/navbar/navbar.directive.js"></script>
-    <script src="app/admin-animal/admin-animal.controller.js"></script>
+    <script src="app/animals/crud-animal/animal-edit.controller.js"></script>
     <script src="components/util/util.service.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->

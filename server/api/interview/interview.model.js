@@ -6,7 +6,14 @@ var InterviewSchema = new mongoose.Schema({
   title: String,
   owner: String,
   animal: String,
-  article: [{ question: String, answer: String}],
+  images: [{
+  		owner: String,
+  	 	animal: String
+  }],
+  article: [{ 
+  		question: String, 
+  		answer: String
+  }],
   date: { type: Date, default: Date.now },
   active: Boolean
 });

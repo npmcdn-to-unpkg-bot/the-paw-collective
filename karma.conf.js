@@ -22,6 +22,8 @@ module.exports = function(config) {
       'client/bower_components/ng-file-upload/ng-file-upload.js',
       'client/bower_components/angular-gravatar/build/angular-gravatar.js',
       'client/bower_components/ng-img-crop/compile/minified/ng-img-crop.js',
+      'client/bower_components/medium-editor/dist/js/medium-editor.js',
+      'client/bower_components/angular-medium-editor/dist/angular-medium-editor.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',

@@ -5,6 +5,7 @@ angular.module('animalCollectiveApp', [
         'animalCollectiveApp.admin',
         'animalCollectiveApp.constants',
         'animalCollectiveApp.dashboard',
+        'animalCollectiveApp.interview',
         'animalCollectiveApp.animals',
         'ngCookies',
         'ngResource',
@@ -13,7 +14,8 @@ angular.module('animalCollectiveApp', [
         'ngFileUpload',
         'ngImgCrop',
         'ui.gravatar',
-        'validation.match'
+        'validation.match',
+        'angular-medium-editor'
     ])
     .config(function($routeProvider, $locationProvider) {
         $routeProvider

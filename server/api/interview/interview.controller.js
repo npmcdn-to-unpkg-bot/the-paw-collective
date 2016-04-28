@@ -76,6 +76,7 @@ export function show(req, res) {
 
 // Creates a new Interview in the DB
 export function create(req, res) {
+  console.log(req.body)
   return Interview.create(req.body)
     .then(respondWithResult(res, 201))
     .catch(handleError(res));

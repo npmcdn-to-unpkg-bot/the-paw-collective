@@ -22,12 +22,16 @@
 // Modules
 @import 'modules/images';
 @import 'modules/shared';
+@import 'modules/drop-image-box';
 
 // Pages
 @import 'pages/home-page';
 @import 'pages/admin';
+@import 'pages/create-edit';
 @import 'pages/admin-animal';
 @import 'pages/admin-dashboard';
+@import 'pages/interview-dashboard';
+@import 'pages/interview';
 @import 'pages/login';
 @import 'pages/signup';
 @import 'pages/main';

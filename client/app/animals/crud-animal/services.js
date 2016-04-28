@@ -24,6 +24,41 @@
             })
         }
 
+        this.updateInterviewAPI = (something, images, articles, cb) => {
+
+            let imageArray = {}
+            var promise = []
+
+            angular.forEach(images, function(value, key) {
+                var deferred = $q.defer()
+                promise.push(deferred.promise)
+                imageUploader.uploadImage(value[0].file, value[0].data64, (result) => {
+                    imageArray[key] = result
+                    deferred.resolve()
+                    console.log(value, key)
+                })
+            })
+
+            $q.all(promise).then(function() {
+
+                console.log('all resolved')
+                console.log(imageArray)
+
+                // When everything is resolved, then one should make a post
+                let interview = {
+                    title: something.title,
+                    owner: something.ownerName,
+                    animal: something.animal,
+                    images: imageArray,
+                    article: articles,
+                    active: true
+                }
+
+                $http.post('/api/interview', interview)
+
+            })
+        }
+
         this.editAPI = (id, animal, imageFile, cb) => {
             let queue = []
 

@@ -15,7 +15,6 @@ class NavbarAdminController {
         this.isLoggedIn = Auth.isLoggedIn
         this.isAdmin = Auth.isAdmin
         this.getCurrentUser = Auth.getCurrentUser
-        console.log(this.getCurrentUser())
 
         this.title = "Create an animal"
         this.user = this.getCurrentUser()

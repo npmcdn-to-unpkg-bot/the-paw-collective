@@ -1,9 +1,9 @@
 <navbar-admin></navbar-admin>
-<section class="create-animal-box">
+<section class="create-edit-box">
     <div class="container">
-        <div class="create-animal-box-wrapper">
+        <div class="create-edit-box-wrapper">
             <!-- Left Box -->
-            <div class="create-animal-box-left">
+            <div class="create-edit-box-left">
                 <form name="addAnimalForm">
                     <input type="text" ng-model="adminAnimal.animal.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
                     <input type="text" ng-model="adminAnimal.animal.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
@@ -31,7 +31,7 @@
                         <img-crop image="adminAnimal.file  | ngfDataUrl" area-type="square" result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
                         </img-crop>
                     </div>
-                    <div class="create-animal-box-left--status">
+                    <div class="create-edit-box-left--status">
                         <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="adminAnimal.upload(croppedDataUrl, adminAnimal.animal)">
                         <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
                     </div>

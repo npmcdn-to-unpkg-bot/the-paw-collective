@@ -3,7 +3,7 @@
 (function() {
 
     class adminAnimalComponent {
-        constructor($http, $q, $interval, adminAnimalDataService) {
+        constructor($http, $q, $interval, $rootScope, adminAnimalDataService) {
             this.$http = $http
             this.$q = $q
             this.$interval = $interval
@@ -11,6 +11,7 @@
             this.adminAnimalDataService = adminAnimalDataService
 
             this.animalCategory = adminAnimalDataService.animals
+            $rootScope.title = "Create an Animal"
         }
 
         imageDropped(){

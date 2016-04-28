@@ -4,12 +4,12 @@
 
     class AdminDashboardController {
 
-        constructor($http, $location, $route) {
+        constructor($http, $location, $rootScope, $route) {
 
             this.$location = $location
             this.$http = $http
             this.$route = $route
-            this.title = "The Dashboard"
+            $rootScope.title = "Animal Dashboard"
 
             this.onInit()
         }

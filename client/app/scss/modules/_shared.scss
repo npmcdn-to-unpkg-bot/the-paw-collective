@@ -38,9 +38,24 @@ input.ac-button, .ac-button {
         border-bottom: 1px solid #e1e1e1;
         margin:10px 0;
         font-size: 0.9em;
+        font-family:$font-stack-mark;
         letter-spacing: 0.07em;
         width:100%;
 	}
 }
 
+::-webkit-input-placeholder {
+   color: #585355;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+   color: #585355;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #585355;  
+}
+
+:-ms-input-placeholder {  
+   color: #585355;  
+}

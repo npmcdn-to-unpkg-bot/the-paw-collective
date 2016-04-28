@@ -3,13 +3,15 @@
 (function() {
 
     class adminAnimalEdit {
-        constructor($http, $routeParams, adminAnimalDataService) {
+        constructor($http, $routeParams, $rootScope, adminAnimalDataService) {
             this.$http = $http
             this.$routeParams = $routeParams
             this.adminAnimalDataService = adminAnimalDataService
             
             this.animal = {}
             this.animalCategory = adminAnimalDataService.animals
+            
+            $rootScope.title = "Edit an Animal"
 
             this.onInit()
         }
