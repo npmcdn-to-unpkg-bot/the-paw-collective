@@ -28,7 +28,7 @@
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
                     <div ngf-drop ng-model="adminInterview.file" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : adminInterview.removeImagePlaceholder}">
-                        <img-crop image="adminInterview.file  | ngfDataUrl" area-type="rectangle" result-image="animalCroppedData" ng-init="animalCroppedData=''" init-max-area="true">
+                        <img-crop image="adminInterview.file  | ngfDataUrl" area-type="rectangle" aspect-ratio="1.7" result-image="animalCroppedData" result-image-size="[ {w: 1252,h: 574}, {w: 500, h:268}]" result-array-image="adminInterview.myArray" ng-init="animalCroppedData=''" init-max-area="true">
                         </img-crop>
                     </div>
                     <p class="drop-box--subtitle">Photo of the owner</p>
@@ -51,9 +51,10 @@
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
                     <div ngf-drop ng-model="adminInterview.file2" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : adminInterview.removeImagePlaceholder2}">
-                        <img-crop image="adminInterview.file2  | ngfDataUrl" area-type="circle" result-image="animalCroppedData2" ng-init="animalCroppedData2=''">
+                        <img-crop image="adminInterview.file2  | ngfDataUrl" area-type="circle" result-image="animalCroppedData2" result-image-size="{w: 300,h: 300}" ng-init="animalCroppedData2=''">
                         </img-crop>
                     </div>
+                    
                     <h1 class="interview-box--title">Interview Questions</h1>
                     <div class="interview-box-questions" ng-repeat="item in adminInterview.items">
                         <input type="text" ng-model="item.question" placeholder="Question" class="ac-label default">
@@ -70,8 +71,8 @@
                         </svg>
                     </button>
                     <div class="create-edit-box-left--status">
-                        <input type="submit" ng-disabled="addInterviewForm.$invalid || adminAnimal.exporting" class="ac-button" ng-click="adminInterview.upload(interviews, animalCroppedData, animalCroppedData2)">
-                        <span class="progress-indicator"><p class="progress-indicator--text">{{adminAnimal.indicatorStatus}}</p></span>
+                        <input type="submit" ng-disabled="addInterviewForm.$invalid || adminInterview.exporting" class="ac-button" ng-click="adminInterview.upload(interviews, animalCroppedData, animalCroppedData2)">
+                        <span class="progress-indicator"><p class="progress-indicator--text">{{adminInterview.indicatorStatus}}</p></span>
                     </div>
                 </form>
             </div>

@@ -4,12 +4,12 @@
 
     function imageUploader($http, $q, Upload) {
 
-        this.uploadImage = (file, croppedUrl, cb) => {
+        this.uploadImage = (croppedUrl, cb) => {
         
             Upload.upload({
                 url: 'api/image-uploads',
                 data: {
-                    file: Upload.dataUrltoBlob(croppedUrl, file)
+                    file: Upload.dataUrltoBlob(croppedUrl)
                 }
             }).then((resp) => {
                 return $q.resolve(resp.data.url).then(cb)

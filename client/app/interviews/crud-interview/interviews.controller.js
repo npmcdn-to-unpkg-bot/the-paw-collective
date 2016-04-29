@@ -7,61 +7,36 @@
             this.$http = $http
             this.$q = $q
             this.$interval = $interval
-            this.animal = {}
             this.adminAnimalDataService = adminAnimalDataService
 
             this.items = []
-        
-
-            this.images = {
-                owner: [{
-                    data64: '',
-                    file: ''
-                }],
-                animal: [{
-                    data64: '',
-                    file: ''
-                }]
-            }
 
             this.animalCategory = adminAnimalDataService.animals
             $rootScope.title = "Create an Animal"
         }
 
         upload(interviews, animalCroppedData, animalCroppedData2) {
-            // console.log(name, this.items, this.file, this.file2)
 
-            this.images.owner[0].data64 = animalCroppedData
-            this.images.owner[0].file = this.file
-            
-            this.images.animal[0].data64 = animalCroppedData2
-            this.images.animal[0].file = this.file2
+            if (typeof this.myArray === 'undefined' || !animalCroppedData2) {
+                alert('You are missing either the photo of the animl or the owner')
+                return
+            }
 
-            this.adminAnimalDataService.updateInterviewAPI(interviews, this.images, this.items)
+            this.indicatorStatus = 'Saving...'
+            this.exporting = true
 
+            let interviewItem = {
+                animal: this.myArray[0].dataURI,
+                animal_thumbnail: this.myArray[1].dataURI,
+                owner: animalCroppedData2
+            }
 
-            // if (!this.file) {
-            //     alert('You need to upload an image')
-            //     return
-            // }
+            this.adminAnimalDataService.updateInterviewAPI(interviews, interviewItem, this.items, (result) => {
+                console.log('the result is', result)
+                this.indicatorStatus = 'Finished!'
+                this.exporting = false
 
-            // this.indicatorStatus = 'Saving...'
-            // this.exporting = true
-
-            // this.adminAnimalDataService.updateInterviewAPI(animal, croppedUrl, this.file, (result) => {
-            //     console.log('The result is', result)
-            //     this.indicatorStatus = 'Finished!'
-            //     this.exporting = false
-            //     this.animal = {}
-            //     this.file = ''
-            //     this.removeImagePlaceholder = false
-            //     this.animal.category = 'Dog'
-
-            //     // After 2 seconds, set the status to an empty string
-            //     this.$interval(() => {
-            //         this.indicatorStatus = ''
-            //     }, 2000)
-            // })
+            })
         }
 
         imageDropped() {
@@ -74,7 +49,6 @@
 
         imageChange(data) {
             this.images[1].data64 = data
-            console.log(this.images)
         }
 
         add() {

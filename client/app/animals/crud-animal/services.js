@@ -15,7 +15,7 @@
 
         this.updateAPI = (animal, croppedUrl, file, cb) => {
 
-            imageUploader.uploadImage(file, croppedUrl, (result) => {
+            imageUploader.uploadImage(croppedUrl, (result) => {
                 animal.image = result
                 let request = $http.post('/api/animal', animal)
                 this.queue.push(request)
@@ -30,12 +30,13 @@
             var promise = []
 
             angular.forEach(images, function(value, key) {
+
                 var deferred = $q.defer()
                 promise.push(deferred.promise)
-                imageUploader.uploadImage(value[0].file, value[0].data64, (result) => {
+                imageUploader.uploadImage(value, (result) => {
+
                     imageArray[key] = result
                     deferred.resolve()
-                    console.log(value, key)
                 })
             })
 
