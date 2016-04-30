@@ -1,11 +1,175 @@
 ////= Main Composition Styling
 //======================================================================//
 
-.homepage {
-  @include display(flex);
-  @include align-items(center);
-  @include flex-direction(row);
-  @include justify-content(center);
 
-  height:100vh;
+.featured_box {
+
+    height:500px;
+    @media (max-width:585px){
+        height: 300px;
+    }
+
+    background:white;
+
+    &_image {
+        @include span(6 of 12);
+        @media (max-width: 585px) {
+            @include span(12 of 12);
+        }
+        height:100%;
+        background-image:url('http://forsevendays.com/photos/1429415375-tumblr_n4yg6qjyfC1rcg5h8o1_1280.jpg');
+        background-size:cover;
+
+    }
+    &_info {
+        @include span(6 of 12 last);
+        @media (max-width: 585px) {
+            @include span(12 of 12);
+        }
+
+        display:table;
+        height:100%;
+
+        .container {
+            display: table-cell;
+            vertical-align: middle;
+
+            h1 {
+                @include transition(opacity 0.1s ease-in);
+                &:hover {
+                    @include transition(opacity 0.1s ease-in);
+                    opacity:0.6;
+                }
+            }
+
+        }
+    }
 }
+
+.subtitle {
+    background-color:#EEEEEE;
+    height:50px;
+    width:100%;
+    margin:30px 0;
+    display:table;
+    .container {
+        @include container(97%);
+        display:table-cell;
+        vertical-align:middle;
+        padding:0 20px;
+        img {
+                width: 20px;
+                float:left;
+                position:relative;
+                top:-2px;
+                padding-right:12px;
+                @media (max-width: 585px) {
+                    display:none;
+                }
+        }
+        p {
+            letter-spacing:0.1em;
+            display:inline-block;
+            font-size: 0.8em;
+            @media (max-width: 585px) {
+                @include span(12 of 12);
+                text-align:center;
+                padding:12px 0;
+            }
+
+            &:first-of-type {
+
+            }
+            &:last-of-type {
+                float:right;
+                span {
+                    padding-left:10px;
+                    cursor:pointer;
+                    &:first-of-type {
+                        font-weight:bold;
+                    }
+                    &:last-of-type {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.instagram_box {
+    // @include display(flex);
+    // @include flex-wrap(wrap);
+    // @include justify-content(space-between);
+    
+    &_items {
+        // width:320px;
+        height:auto;
+        // Breakpoints
+        
+        &.hideme {
+            opacity:0;
+        }
+        
+        cursor:pointer;
+
+        @media (min-width:1255px) {
+            @include span(3 of 12);
+            &:nth-child(4n) { @include last; }
+        }
+
+        @media (max-width: 1254px) {
+            @include span(4 of 12);
+            &:nth-child(3n) { @include last; }
+        }
+
+        @media (max-width: 868px) {
+            @include span(6 of 12);
+            &:nth-child(2n) { @include last; }
+            &:nth-child(3n) {  
+                float: left;
+                // margin-right: gutter();
+            }
+        }
+
+        @media (max-width: 585px) {
+            @include span(12 of 12);
+            &:nth-child(2n), &:nth-child(3n) {
+                float: left;
+            }
+
+        }
+    
+
+        &:hover {
+            .description {
+                h2 {
+                    opacity:0.6;
+                    @include transition(opacity 0.2s ease-in);
+                }
+            }
+            .photo {
+                opacity:0.8;
+                 @include transition(opacity 0.2s ease-in);
+            }
+        }
+
+        display:inline-block;
+        margin-bottom:20px;
+
+        .photo {
+            width: 100%;
+            height: 320px;
+            background:white;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position: center; 
+            
+            @include transition(opacity 0.2s ease-in);
+        }
+        .description {
+
+        }
+    }
+}
+

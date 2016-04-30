@@ -4,35 +4,23 @@
 
     class MainController {
 
-        constructor($http) {
+        constructor($http, AnimalDataService) {
             this.$http = $http
-            this.awesomeThings = []
+            this.AnimalDataService = AnimalDataService
         }
 
         $onInit() {
-
-            this.$http.get('/api/things').then(response => {
-                this.awesomeThings = response.data;
+            this.AnimalDataService.index((result) => {
+                this.animals = result.data
             })
-        }
-
-        addThing() {
-
-            if (this.newThing) {
-                this.$http.post('/api/things', { name: this.newThing })
-                this.newThing = ''
-            }
-        }
-
-        deleteThing(thing) {
-            this.$http.delete('/api/things/' + thing._id)
         }
     }
 
     angular.module('animalCollectiveApp')
         .component('main', {
             templateUrl: 'app/main/main.html',
-            controller: MainController
+            controller: MainController,
+            controllerAs: 'main'
         })
 
 })()

@@ -4,27 +4,18 @@
 
     function AnimalDataService($http, $q, Upload, imageUploader) {
         this.queue = []
-
+    
+        // Gets a list of Animals
         this.index = (cb) => {
             $http.get('/api/animal').then(cb)
         }
 
+        // Gets a single Animal from the DB
         this.show = (id, cb) => {
             $http.get(`/api/animal/${id}`).then(cb)
         }
 
-        this.upload = (animal, croppedUrl, file, cb) => {
-
-            imageUploader.uploadImage(croppedUrl, (result) => {
-                animal.image = result
-                
-                let request = $http.post('/api/animal', animal)
-                this.queue.push(request)
-
-                return $q.all(this.queue).then(cb)
-            })
-        }
-
+        // Edits a single Animal from the DB
         this.edit = (id, animal, imageFile, cb) => {
 
             let queue = []
@@ -43,6 +34,20 @@
             }
         }
 
+        // Uploads the images to Cloudinary
+        this.upload = (animal, croppedUrl, file, cb) => {
+
+            imageUploader.uploadImage(croppedUrl, (result) => {
+                animal.image = result
+                
+                let request = $http.post('/api/animal', animal)
+                this.queue.push(request)
+
+                return $q.all(this.queue).then(cb)
+            })
+        }
+
+        // Category of Animals - This needs to be seprated later
         this.animals = [{
             text: 'Dog'
         }, {

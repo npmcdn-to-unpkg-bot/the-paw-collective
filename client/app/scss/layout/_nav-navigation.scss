@@ -1,3 +1,4 @@
+// ADMIN
 
 .nav {
     background: #4D5CF9;
@@ -114,5 +115,28 @@
         border-bottom: 6px solid white;
         border-left: 6px solid transparent;
         content: '';
+    }
+}
+
+// MAIN
+
+header.main {
+    padding:50px 0;
+
+    .logo {
+        display: inline-block;
+        img {
+            width:180px;
+        }
+    }
+
+    ul {
+        float: right;
+        padding: 10px 0;
+        li {
+            display: inline-block;
+            color:#AA889F;
+            padding-left:30px;
+        }
     }
 }
