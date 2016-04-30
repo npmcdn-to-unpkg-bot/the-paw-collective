@@ -3,21 +3,17 @@
 (function() {
 
     class adminInterviewComponent {
-        constructor($http, $q, $interval, $rootScope, adminAnimalDataService) {
-            this.$http = $http
-            this.$q = $q
-            this.$interval = $interval
-            this.adminAnimalDataService = adminAnimalDataService
+        constructor($location, $rootScope, InterviewDataService) {
+            this.$location = $location
+            this.InterviewDataService = InterviewDataService
+            this.articles = []
 
-            this.items = []
-
-            this.animalCategory = adminAnimalDataService.animals
-            $rootScope.title = "Create an Animal"
+            $rootScope.title = "Create an Interview"
         }
 
-        upload(interviews, animalCroppedData, animalCroppedData2) {
+        upload(data, animalCroppedData, ownerCroppedData) {
 
-            if (typeof this.myArray === 'undefined' || !animalCroppedData2) {
+            if (typeof this.myArray === 'undefined' || !ownerCroppedData) {
                 alert('You are missing either the photo of the animl or the owner')
                 return
             }
@@ -25,43 +21,29 @@
             this.indicatorStatus = 'Saving...'
             this.exporting = true
 
-            let interviewItem = {
+            let photos = {
                 animal: this.myArray[0].dataURI,
                 animal_thumbnail: this.myArray[1].dataURI,
-                owner: animalCroppedData2
+                owner: ownerCroppedData
             }
 
-            this.adminAnimalDataService.updateInterviewAPI(interviews, interviewItem, this.items, (result) => {
-                console.log('the result is', result)
+            this.InterviewDataService.upload(data, photos, this.articles, (result) => {
                 this.indicatorStatus = 'Finished!'
                 this.exporting = false
-
+                this.$location.path("/admin-interviews");
             })
         }
 
-        imageDropped() {
-            this.removeImagePlaceholder = true
-        }
-
-        imageDropped2() {
-            this.removeImagePlaceholder2 = true
-        }
-
-        imageChange(data) {
-            this.images[1].data64 = data
-        }
-
         add() {
-            this.items.push({
+            this.articles.push({
                 question: "",
                 answer: ""
             })
         }
 
         remove(index) {
-            this.items.splice(index, 1)
+            this.articles.splice(index, 1)
         }
-
     }
 
     angular.module('animalCollectiveApp.interview')

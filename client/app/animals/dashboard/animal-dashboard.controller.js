@@ -4,18 +4,20 @@
 
     class AdminDashboardController {
 
-        constructor($http, $location, $rootScope, $route) {
+        constructor($http, $location, $rootScope, $route, AnimalDataService) {
 
             this.$location = $location
             this.$http = $http
             this.$route = $route
+            this.AnimalDataService = AnimalDataService
+
             $rootScope.title = "Animal Dashboard"
 
             this.onInit()
         }
 
         onInit() {
-            this.$http.get('/api/animal').then(response => {
+            this.AnimalDataService.index((response) => {
                 this.animalCollections = response.data
             })
         }

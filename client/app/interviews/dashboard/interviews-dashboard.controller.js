@@ -4,26 +4,24 @@
 
     class AdminInterviewDashboardController {
 
-        constructor($http, $location, $rootScope, $route) {
+        constructor($http, $location, $rootScope, $route, InterviewDataService) {
 
             this.$location = $location
             this.$http = $http
             this.$route = $route
+            this.InterviewDataService = InterviewDataService
             this.onInit()
 
             $rootScope.title = "Interview Dashboard"
-
         }
 
         onInit() {
-            this.$http.get('/api/interview').then(response => {
+            this.InterviewDataService.index((response) => {
                 this.interviews = response.data
-                console.log(response)
             })
         }
     }
 
     angular.module('animalCollectiveApp.interview')
         .controller('AdminInterviewDashboardController', AdminInterviewDashboardController)
-
 })()

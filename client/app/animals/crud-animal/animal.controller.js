@@ -3,14 +3,14 @@
 (function() {
 
     class adminAnimalComponent {
-        constructor($http, $q, $interval, $rootScope, adminAnimalDataService) {
+        constructor($http, $q, $interval, $rootScope, AnimalDataService) {
             this.$http = $http
             this.$q = $q
             this.$interval = $interval
             this.animal = {}
-            this.adminAnimalDataService = adminAnimalDataService
+            this.AnimalDataService = AnimalDataService
 
-            this.animalCategory = adminAnimalDataService.animals
+            this.animalCategory = AnimalDataService.animals
             $rootScope.title = "Create an Animal"
         }
 
@@ -19,8 +19,6 @@
         }
 
         upload(croppedUrl, animal) {
-
-            console.log(croppedUrl)
             
             if (!this.file) {
                 alert('You need to upload an image')
@@ -30,8 +28,7 @@
             this.indicatorStatus = 'Saving...'
             this.exporting = true
 
-            this.adminAnimalDataService.updateAPI(animal, croppedUrl, this.file, (result) => {
-                console.log('The result is', result)
+            this.AnimalDataService.upload(animal, croppedUrl, this.file, (result) => {
                 this.indicatorStatus = 'Finished!'
                 this.exporting = false
                 this.animal = {}
@@ -42,7 +39,7 @@
                 // After 2 seconds, set the status to an empty string
                 this.$interval(() => {
                     this.indicatorStatus = ''
-                },2000)
+                }, 2000)
             })
         }
     }

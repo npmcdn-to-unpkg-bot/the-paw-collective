@@ -5,11 +5,11 @@
             <!-- Left Box -->
             <div class="create-edit-box-left">
                 <form name="addInterviewForm">
-                    <input type="text" ng-model="interviews.name" placeholder="Name" class="ac-label default" required/>
-                    <input type="text" ng-model="interviews.ownerName" placeholder="Owner's Name" class="ac-label default" required/>
-                    <input type="text" ng-model="interviews.animal" placeholder="Animal's Name" class="ac-label default" required/>
+                    <input type="text" ng-model="data.name" placeholder="Name" class="ac-label default" required/>
+                    <input type="text" ng-model="data.ownerName" placeholder="Owner's Name" class="ac-label default" required/>
+                    <input type="text" ng-model="data.animal" placeholder="Animal's Name" class="ac-label default" required/>
                     <p class="drop-box--subtitle">Photo of the animal</p>
-                    <div ngf-drop ngf-change="adminInterview.imageDropped()" ngf-select ng-model="adminInterview.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
+                    <div ngf-drop ngf-select ng-model="adminInterview.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'" image-placeholder>
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs></defs>
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -32,7 +32,7 @@
                         </img-crop>
                     </div>
                     <p class="drop-box--subtitle">Photo of the owner</p>
-                    <div ngf-drop ngf-change="adminInterview.imageDropped2()" ngf-select ng-model="adminInterview.file2" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
+                    <div ngf-drop ngf-select ng-model="adminInterview.file2" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs></defs>
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -51,12 +51,12 @@
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
                     <div ngf-drop ng-model="adminInterview.file2" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : adminInterview.removeImagePlaceholder2}">
-                        <img-crop image="adminInterview.file2  | ngfDataUrl" area-type="circle" result-image="animalCroppedData2" result-image-size="{w: 300,h: 300}" ng-init="animalCroppedData2=''">
+                        <img-crop image="adminInterview.file2  | ngfDataUrl" area-type="circle" result-image="ownerCroppedData" result-image-size="{w: 300,h: 300}" ng-init="ownerCroppedData=''">
                         </img-crop>
                     </div>
                     
                     <h1 class="interview-box--title">Interview Questions</h1>
-                    <div class="interview-box-questions" ng-repeat="item in adminInterview.items">
+                    <div class="interview-box-questions" ng-repeat="item in adminInterview.articles">
                         <input type="text" ng-model="item.question" placeholder="Question" class="ac-label default">
                         <p class="ac-label default interview-box--editor" ng-model="item.answer" medium-editor bind-options="{'toolbar': {'buttons': ['bold', 'italic', 'underline', 'anchor']}}" data-placeholder="Type your answer"></p>
                         <button class="interview-remove-butn" ng-click="adminInterview.remove($index)">DELETE</button>
@@ -71,7 +71,7 @@
                         </svg>
                     </button>
                     <div class="create-edit-box-left--status">
-                        <input type="submit" ng-disabled="addInterviewForm.$invalid || adminInterview.exporting" class="ac-button" ng-click="adminInterview.upload(interviews, animalCroppedData, animalCroppedData2)">
+                        <input type="submit" ng-disabled="addInterviewForm.$invalid || adminInterview.exporting" class="ac-button" ng-click="adminInterview.upload(data, animalCroppedData, ownerCroppedData)">
                         <span class="progress-indicator"><p class="progress-indicator--text">{{adminInterview.indicatorStatus}}</p></span>
                     </div>
                 </form>
