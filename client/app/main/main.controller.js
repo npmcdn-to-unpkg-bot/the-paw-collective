@@ -12,6 +12,7 @@
         $onInit() {
             this.AnimalDataService.index((result) => {
                 this.animals = result.data
+                console.log(this.animals)
             })
         }
     }
