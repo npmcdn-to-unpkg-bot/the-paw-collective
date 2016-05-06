@@ -9,10 +9,14 @@ $black: #000000 !default;
 $red: #FF0000 !default;
 $maroon: #800000 !default;
 $blue: #4D5CF9 !default;
+$redorange: RGB(246, 81, 81) !default;
+$razmatazz: RGB(115, 83, 242) !default;
+$halfspanishwhite: RGB(230, 214, 197) !default;
 
 /// Color usage
 $primary-color: $blue;
-$secondary-color: $maroon;
+$secondary-color: $redorange;
+$navbar-admin-color:$razmatazz;
 
 /// Font size usage
 $lg-font-size: 110%;

@@ -1,8 +1,8 @@
 // _core.scss
-
+// 
 body {
     font-family: $font-stack-mark;
-    background: #F7F7F7;
+    background: linear-gradient(-224deg, #545073 0%, #353344 100%);
 }
 
 * {
@@ -29,16 +29,15 @@ select {
 }
 
 input.ng-untouched {
-    background:none;
+    background: none;
 }
 
-input.ng-valid-required.ng-valid-parse, 
-input.ng-invalid.ng-valid-parse  {
+input.ng-valid-required.ng-valid-parse,
+input.ng-invalid.ng-valid-parse {
     border-top: 0;
     border-right: 0;
     border-left: 0;
 }
-
 
 input.ng-valid-required.ng-valid-parse {
     border-bottom: 1px solid rgba(0, 140, 0, 1);
