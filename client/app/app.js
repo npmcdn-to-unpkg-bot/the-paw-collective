@@ -17,7 +17,9 @@ angular.module('animalCollectiveApp', [
         'validation.match',
         'angular-medium-editor'
     ])
-    .config(function($routeProvider, $locationProvider) {
+    .config(($routeProvider, $locationProvider, $compileProvider) => {
+        $compileProvider.debugInfoEnabled(false)
+
         $routeProvider
             .otherwise({
                 redirectTo: '/'
