@@ -2,19 +2,16 @@
 <section class="main">
     <div class="container">
         <h1 class="main_title">Collection of popular animal <br>instagram accounts</h1>
-          <div class="gallery_home">
-            <ul>
-                <li class="gallery_home--items" ng-repeat="item in main.animals">
-                    <div class="gallery_home--items---overlay">
-                        <article>
-                            <p>{{item.name}}</p>
-                            <p>@{{item.instagram}}</p>
-                        </article>
-                    </div>
-                    <div class="gallery_home--items---hero" style="background-image:url('{{item.image}}');">
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <ul isotope-widget class="grid">
+            <li class="grid-item" ng-repeat="item in main.animals">
+                <div class="grid-info">
+                    <article>
+                        <p>{{item.name}}</p>
+                        <p>@{{item.instagram}}</p>
+                    </article>
+                </div>
+                <div class="grid-hero" style="background-image:url('{{item.image}}');"></div>
+            </li>
+        </ul>
     </div>
 </section>

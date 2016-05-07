@@ -4,7 +4,7 @@
 
     class MainController {
 
-        constructor($http, AnimalDataService) {
+        constructor($scope, $http, AnimalDataService) {
             this.$http = $http
             this.AnimalDataService = AnimalDataService
         }
