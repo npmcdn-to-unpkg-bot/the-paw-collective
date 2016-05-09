@@ -38,24 +38,7 @@ angular.module('animalCollectiveApp')
 	        }
 	    }
 	})
-
-	.directive('isotopeWidget', ($timeout) => {
-		return {
-			restrict: 'EA',
-			link: (scope, elem, attrs) => {
-			
-				console.log('something here')
-				
-				$timeout(function () {
-				    var iso = new Isotope(elem[0], {
-				        itemSelector: '.grid-item',
-				        layoutMode: 'masonry'
-				     });
-				},1000);
-			}
-		}
-	})	
-
+	
 	.directive('circleMenu', () => {
 	    return {
 	        restrict: 'EA',
