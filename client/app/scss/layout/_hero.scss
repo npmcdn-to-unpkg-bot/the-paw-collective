@@ -6,10 +6,12 @@
     background-position: 50% 20%;
     position: relative;
     padding: 30px 0;
+
     &_innerbox,
     &_title {
         position: absolute;
     }
+
     &_innerbox {
         height: 89%;
         width: 40%;
@@ -21,6 +23,7 @@
         background: rgba(226, 213, 206, 0.15);
         @include box-sizing(border-box);
     }
+    
     &_title {
 
         @include display(flex);

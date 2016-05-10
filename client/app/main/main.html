@@ -1,17 +1,24 @@
 <navbar></navbar>
 <section class="hero">
     <div class="hero_innerbox">
-        
     </div>
     <div class="hero_title">
         <h1>The Paw Collective</h1>
-        <p>collection of <br> famous dogs</p>
+        <p>collection of
+            <br> famous dogs</p>
     </div>
 </section>
-
 <section class="main">
     <div class="container">
-        <h1 class="main_title">Collection of popular animal <br>instagram accounts</h1>
+        <div class="filter_wrapper">
+            <div class="form-select">
+                <select name="" id="">
+                    <option value="" disabled="disabled" selected="selected">Filter By</option>
+                    <option>Name</option>
+                    <option>Last Added</option>
+                </select>
+            </div>
+        </div>
         <div class="gallery_home">
             <ul>
                 <li class="gallery_home--items" ng-repeat="item in main.animals">
