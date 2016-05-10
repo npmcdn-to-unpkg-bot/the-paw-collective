@@ -1,17 +1,30 @@
 <navbar></navbar>
+<section class="hero">
+    <div class="hero_innerbox">
+        
+    </div>
+    <div class="hero_title">
+        <h1>The Paw Collective</h1>
+        <p>collection of <br> famous dogs</p>
+    </div>
+</section>
+
 <section class="main">
     <div class="container">
         <h1 class="main_title">Collection of popular animal <br>instagram accounts</h1>
-        <ul isotope-widget class="main_grid">
-            <li class="main_grid-item" ng-repeat="item in main.animals">
-                <div class="main_grid-info">
-                    <article>
-                        <p>{{item.name}}</p>
-                        <p>@{{item.instagram}}</p>
-                    </article>
-                </div>
-                <div class="main_grid-hero" style="background-image:url('{{item.image}}');"></div>
-            </li>
-        </ul>
+        <div class="gallery_home">
+            <ul>
+                <li class="gallery_home--items" ng-repeat="item in main.animals">
+                    <div class="gallery_home--items---overlay">
+                        <article>
+                            <p>{{item.name}}</p>
+                            <p>@{{item.instagram}}</p>
+                        </article>
+                    </div>
+                    <div class="gallery_home--items---hero" style="background-image:url('{{item.image}}');">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>

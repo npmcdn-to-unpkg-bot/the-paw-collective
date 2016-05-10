@@ -1,99 +1,104 @@
 // ////= Main Composition Styling
 // //======================================================================//
+
 section.main {
     .container {
+
         .main_title {
-            color: #a8a1e1;
-            font-weight: lighter;
-            font-size: 1em;
-            letter-spacing: 0.02em;
-            line-height: 1.6em;
+            color:#313131;
+            font-weight:lighter;
+            font-size:1.1em;
+            line-height:1.6em;
             padding: 20px 0;
             text-align: center;
             text-transform: uppercase;
         }
-        .main_grid {
-            li {
-                &:nth-child(2) {
-                    height: 500px;
-                }
-                &:nth-child(5) {
-                    height: 400px;
-                }
-                &:nth-child(7) {
-                    height: 500px;
-                }
+
+        .gallery_home {
+            @include full;
+            ul {
+                @include clearfix;
+                list-style: none;
+                padding: 0;
             }
-        }
-        .main_grid-item {
-            height: 300px;
-            width: 20%;
-            border: 15px solid transparent;
-            position: relative;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            @include breakpoint(md) {
-                width: 25%;
-            }
-            @include breakpoint(sm) {
-                width: 50%;
-            }
-            &:hover {
-                > div:first-child {
-                    opacity: 1;
-                    @include transition(opacity 0.1s ease-in);
-                    p {
-                        &:first-of-type {
-                            @include animation(cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.7s normal forwards 1 titleUp);
-                            @include animation-delay(0.1s)
-                        }
-                        &:last-of-type {
-                            @include animation(cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.7s normal forwards 1 titleDown);
-                            @include animation-delay(0.1s)
+            &--items {
+                height: auto;
+                background: white;
+                margin-bottom: gutter(susy-get(columns));
+                position: relative;
+                height: 277px;
+
+                @include gallery(1 of 5);
+                @include breakpoint(md) {
+                    @include gallery(4 of 12);
+                }
+                @include breakpoint(sm) {
+                    @include gallery(12 of 12);
+                    float: none;
+                }
+
+                &:hover {
+                    > div:first-child {
+
+                        opacity: 1;
+                        @include transition(opacity 0.1s ease-in);
+
+                        p {
+                            &:first-of-type {
+                                @include animation(cubic-bezier(0.2, 0.3, 0.25, 0.9) 1.2s normal forwards 1 titleUp);
+                                @include animation-delay(0.2s)
+                            }
+                            &:last-of-type {
+                                @include animation(cubic-bezier(0.2, 0.3, 0.25, 0.9) 1.2s normal forwards 1 titleDown);
+                                @include animation-delay(0.2s)
+                            }
                         }
                     }
                 }
-            }
-        }
-        
-        .main_grid-info,
-        .main_grid-hero {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        .main_grid-info {
-            z-index: 2;
-            background: rgba(246, 81, 81, 0.73);
-            cursor: pointer;
-            opacity: 0;
-            @include transition(opacity 0.2s ease-in-out);
-            @include display(flex);
-            @include align-items(center);
-            @include justify-content(center);
-            @include flex-direction(row);
-            p {
-                display: block;
-                text-align: center;
-                padding: 3px 5px;
-                color: white;
-                &:first-of-type {
-                    font-size: 1.5em;
-                    font-weight: bolder;
-                    opacity: 0;
+
+                &---overlay,
+                &---hero {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
                 }
-                &:last-of-type {
+
+                &---overlay {
+                    z-index: 2;
+                    background: rgba(246, 81, 81, 0.73);
+                    cursor: pointer;
                     opacity: 0;
+
+                    @include transition(opacity 0.5s ease-in-out);
+                    @include display(flex);
+                    @include align-items(center);
+                    @include justify-content(center);
+                    @include flex-direction(row);
+
+                    p {
+                        display: block;
+                        text-align: center;
+                        padding: 3px 0;
+                        color: white;
+                        &:first-of-type {
+                            font-size: 1.5em;
+                            font-weight: bolder;
+                            opacity: 0;
+                        }
+                        &:last-of-type {
+                            opacity: 0;
+                        }
+
+                    }
+                }
+                &---hero {
+                    background: black;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    border-radius: 3px;
+                    filter: grayscale(40%);
                 }
             }
-        }
-        .main_grid-hero {
-            background: black;
-            background-size: cover;
-            background-position: 50% 50%;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            filter: grayscale(40%);
         }
     }
 }
