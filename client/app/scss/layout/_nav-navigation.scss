@@ -1,14 +1,12 @@
 // ADMIN
-
 .nav {
     background: $navbar-admin-color;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084);
     height: 70px;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     > .container {
         height: 100%;
         position: relative;
@@ -24,7 +22,7 @@
     &-link {
         text-decoration: none;
         color: white;
-        letter-spacing:0.1em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         font-weight: bolder;
         font-size: 1.1em;
@@ -33,10 +31,8 @@
 
 .avatar {
     display: inline-block;
-    cursor:pointer;
-
+    cursor: pointer;
     margin-left: auto;
-
     &-image {
         border-radius: 200%;
         height: 42px;
@@ -53,48 +49,38 @@
     right: -20px;
     top: 90px;
     visibility: hidden;
-    opacity:0;
-
+    opacity: 0;
     &.active {
-        display:block;
+        display: block;
         visibility: visible;
-        opacity:1;
+        opacity: 1;
         @include transition(opacity 0.1s ease-in 0s);
     }
-
     // Caret
     &-caret {
         left: auto;
         right: 30px;
     }
-
-
     &-items {
-
-    	> li {
-			
-			border-top: 1px solid #E1E8ED;
-	        border-bottom: 1px solid #E1E8ED;
-	        color: #a1a2a3;
-	        font-size: 0.8em;
-	        padding: 10px 20px;
-
-	        &:hover {
-	            background: black;
-	            color: white;
-	        }
-
-	    }
-
-	    &:first-of-type,
-	    &:last-of-type {
-	    	> li {
-				border-top: none;
-            	border-bottom: none;
-	    	}
-	    }
+        > li {
+            border-top: 1px solid #E1E8ED;
+            border-bottom: 1px solid #E1E8ED;
+            color: #a1a2a3;
+            font-size: 0.8em;
+            padding: 10px 20px;
+            &:hover {
+                background: black;
+                color: white;
+            }
+        }
+        &:first-of-type,
+        &:last-of-type {
+            > li {
+                border-top: none;
+                border-bottom: none;
+            }
+        }
     }
-
     &::before {
         position: absolute;
         top: -7px;
@@ -119,39 +105,37 @@
 }
 
 // MAIN
-
-header.main {
-    padding:30px 0;
-
+.main {
+    padding: 30px 0;
     nav {
         @include display(flex);
         @include align-items(center);
     }
-
     .logo {
         display: inline-block;
         font-size: 1.1em;
-        font-weight:bolder;
-        color:$graysuit;
-        text-transform:uppercase;
-
+        font-weight: bolder;
+        color: $graysuit;
+        text-transform: uppercase;
         img {
-            width:180px;
+            width: 180px;
         }
     }
-
-    ul {
-        margin-left:auto;
+    &_navigation {
+        margin-left: auto;
         padding: 10px 0;
 
-        li {
+        &--items {
             display: inline-block;
-            color:$graysuit;
-            padding-left:30px;
-            text-transform:uppercase;
+            color: $graysuit;
+            padding-left: 30px;
+            text-transform: uppercase;
             font-size: 0.9em;
-            font-weight:bolder;
-            letter-spacing:0.1em;
+            font-weight: bolder;
+            letter-spacing: 0.1em;
+            &.active {
+                color: $graysuit-active;
+            }
         }
     }
 }
