@@ -16,7 +16,8 @@ angular.module('animalCollectiveApp', [
         'ui.gravatar',
         'validation.match',
         'angular-medium-editor',
-        'headroom'
+        'headroom',
+        'cgBusy'
     ])
     .config(($routeProvider, $locationProvider, $compileProvider) => {
         $compileProvider.debugInfoEnabled(false)
@@ -28,3 +29,8 @@ angular.module('animalCollectiveApp', [
 
         $locationProvider.html5Mode(true)
     })
+    .run(($rootScope) => {
+        $rootScope.activePromises = []
+    })
+
+

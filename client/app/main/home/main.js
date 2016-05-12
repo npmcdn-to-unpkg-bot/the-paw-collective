@@ -7,3 +7,5 @@ angular.module('animalCollectiveApp')
                 template: '<main></main>'
             })
     })
+
+

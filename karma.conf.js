@@ -30,6 +30,8 @@ module.exports = function(config) {
       'client/bower_components/headroom.js/dist/jQuery.headroom.min.js',
       'client/bower_components/headroom.js/dist/angular.headroom.js',
       'client/bower_components/headroom.js/dist/angular.headroom.min.js',
+      'client/bower_components/angular-animate/angular-animate.js',
+      'client/bower_components/angular-busy-plus/dist/angular-busy.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',
