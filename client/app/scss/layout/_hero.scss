@@ -1,3 +1,4 @@
+
 .hero {
     height: 480px;
     background: black;
@@ -6,6 +7,11 @@
     background-position: 50% 20%;
     position: relative;
     padding: 30px 0;
+
+    // Responsive Breakpoints
+    @include breakpoint(md){
+        height:300px;
+    }
 
     &_innerbox,
     &_title {
@@ -22,6 +28,15 @@
         border: 21px solid rgba(219, 220, 233, 0.22);
         background: rgba(226, 213, 206, 0.15);
         @include box-sizing(border-box);
+
+        // Responsive Breakpoints
+        @include breakpoint(md) {
+            width:60%;
+            height:84%;
+        }
+        @include breakpoint(sm) {
+            width:80%;
+        }
     }
     
     &_title {
@@ -38,7 +53,17 @@
             font-size: 3.6em;
             color: white;
             text-transform: uppercase;
+            text-align: center;
             letter-spacing: 0.2em;
+
+            // Responsive Breakpoints
+            @include breakpoint(md) {
+                font-size:2em;
+            }
+
+            @include breakpoint(sm) {
+                font-size:1.5em;
+            }
         }
         p {
             padding: 20px 0;

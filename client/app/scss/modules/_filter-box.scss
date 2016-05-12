@@ -4,8 +4,17 @@
     .form-select {
 
         position: relative;
-        width: 15%;
+        width: 20%;
         margin:0 auto;
+        
+        // Responsive Breakpoints
+        @include breakpoint(md) {
+            width:30%;
+        }
+        @include breakpoint(sm) {
+            width:100%;
+        }
+
 
         select {
         	text-transform:uppercase;

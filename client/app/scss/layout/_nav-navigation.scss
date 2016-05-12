@@ -106,11 +106,14 @@
 
 // MAIN
 .main {
+
     padding: 30px 0;
+
     nav {
         @include display(flex);
         @include align-items(center);
     }
+
     .logo {
         display: inline-block;
         font-size: 1.1em;
@@ -121,9 +124,15 @@
             width: 180px;
         }
     }
+
     &_navigation {
         margin-left: auto;
         padding: 10px 0;
+
+        // Responsive Breakpoints
+        @include breakpoint(sm) {
+            display:none;
+        }
 
         &--items {
             display: inline-block;
