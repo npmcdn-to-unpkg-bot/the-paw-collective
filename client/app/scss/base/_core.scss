@@ -3,6 +3,8 @@
 body {
     font-family: $font-stack-mark;
     background: white;
+    -webkit-backface-visibility: hidden;
+
 }
 
 * {
