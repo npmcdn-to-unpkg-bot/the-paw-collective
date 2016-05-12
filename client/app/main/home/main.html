@@ -23,9 +23,9 @@
 
         <div class="featured_interviews">
             <div class="featured_interviews__items" ng-repeat="item in main.interviews">
-                <div class="featured_interviews__items--banner" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
+                <a href="/interview/{{item.title | slugify}}"><div class="featured_interviews__items--banner" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div></a>
                 <article class="featured_interviews__items--article">
-                    <h1>{{item.title}}</h1>
+                    <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
                     <p>{{item.excerpt}}</p>
                 </article>
             </div>
