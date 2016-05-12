@@ -2,6 +2,12 @@
     position: fixed;
     left: -2%;
     top: 40%;
+
+    // Responsive Breakpoints
+    @include breakpoint(md) {
+        display:none;
+    }
+    
     &__left {
         @include transform(rotate(-90deg));
         text-transform: uppercase;
