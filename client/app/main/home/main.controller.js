@@ -19,7 +19,7 @@
 
     angular.module('animalCollectiveApp')
         .component('main', {
-            templateUrl: 'app/main/main.html',
+            templateUrl: 'app/main/home/main.html',
             controller: MainController,
             controllerAs: 'main'
         })
