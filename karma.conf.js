@@ -24,6 +24,12 @@ module.exports = function(config) {
       'client/bower_components/medium-editor/dist/js/medium-editor.js',
       'client/bower_components/angular-medium-editor/dist/angular-medium-editor.js',
       'client/bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.js',
+      'client/bower_components/headroom.js/dist/headroom.js',
+      'client/bower_components/headroom.js/dist/headroom.min.js',
+      'client/bower_components/headroom.js/dist/jQuery.headroom.js',
+      'client/bower_components/headroom.js/dist/jQuery.headroom.min.js',
+      'client/bower_components/headroom.js/dist/angular.headroom.js',
+      'client/bower_components/headroom.js/dist/angular.headroom.min.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',

@@ -15,7 +15,8 @@ angular.module('animalCollectiveApp', [
         'ngImgCrop',
         'ui.gravatar',
         'validation.match',
-        'angular-medium-editor'
+        'angular-medium-editor',
+        'headroom'
     ])
     .config(($routeProvider, $locationProvider, $compileProvider) => {
         $compileProvider.debugInfoEnabled(false)

@@ -99,7 +99,6 @@ $map-portifolio: ( gutters: 0.1);
                         background: black;
                         background-size: cover;
                         background-position: 50% 50%;
-                        border-radius: 3px;
                         filter: grayscale(50%);
                         &::after {
                             content: '';
