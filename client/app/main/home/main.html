@@ -22,18 +22,11 @@
         </div>
 
         <div class="featured_interviews">
-            <div class="featured_interviews__items">
-                <div class="featured_interviews__items--banner" style="background-image:url('../../assets/images/interview_1.jpg')"></div>
+            <div class="featured_interviews__items" ng-repeat="item in main.interviews">
+                <div class="featured_interviews__items--banner" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
                 <article class="featured_interviews__items--article">
-                    <h1>Bringing up Bella</h1>
-                    <p>And while I am grateful for the friendships we've made, amazed by all the other pet lovers and bloggers we've discovered and so very humbled by the trust other scared-y dog owners have put in us, I am also more than a little exhausted by the amount of effort it takes to keep "it all" going.</p>
-                </article>
-            </div>
-            <div class="featured_interviews__items">
-                <div class="featured_interviews__items--banner" style="background-image:url('../../assets/images/interview_2.jpg')"></div>
-                <article class="featured_interviews__items--article">
-                    <h1>Life with Desmond</h1>
-                    <p>And while I am grateful for the friendships we've made, amazed by all the other pet lovers and bloggers we've discovered and so very humbled by the trust other scared-y dog owners have put in us, I am also more than a little exhausted by the amount of effort it takes to keep "it all" going.</p>
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.excerpt}}</p>
                 </article>
             </div>
         </div>

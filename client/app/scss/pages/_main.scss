@@ -144,9 +144,7 @@ $map-portifolio: ( gutters: 0.1);
         // Responsive Breakpoints
         @include breakpoint(md) {
             @include span(12 of 12);
-            &:last-of-type {
-                
-            }
+            padding-bottom:30px;
         }
     }
 }

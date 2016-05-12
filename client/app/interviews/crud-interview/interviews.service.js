@@ -14,6 +14,10 @@
             $http.get(`/api/interview/${id}`).then(cb)
         }
 
+        this.showByTitle = (title, cb) => {
+            $http.get(`/api/interview/${title}`).then(cb)
+        }
+
         // Uploads the images to Cloudinary
         this.upload = (data, photos, articles, cb) => {
 
@@ -40,7 +44,7 @@
             $q.all(promise).then(() => {
 
                 interview = {
-                    title: data.title,
+                    title: data.name,
                     owner: data.ownerName,
                     excerpt: data.excerpt,
                     animal: data.animal,

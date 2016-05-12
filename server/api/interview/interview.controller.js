@@ -74,6 +74,17 @@ export function show(req, res) {
     .catch(handleError(res));
 }
 
+// Gets a single Interview from the DB by Title
+export function showByTitle(req, res) {
+
+  let title = req.params.id.replace(/-/g, " ")
+
+  return Interview.findOne({title: new RegExp('^'+title+'$', "i")}).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res))
+}
+
 // Creates a new Interview in the DB
 export function create(req, res) {
   console.log(req.body)

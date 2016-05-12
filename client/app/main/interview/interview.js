@@ -3,7 +3,7 @@
 angular.module('animalCollectiveApp')
     .config(function($routeProvider) {
         $routeProvider
-            .when('/interviews', {
+            .when('/interview/:id', {
                 template: '<interview></interview>'
             })
     })

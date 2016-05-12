@@ -4,22 +4,22 @@
 
     class InterviewController {
 
-        constructor($scope, $http, InterviewDataService) {
+        constructor($scope,  $routeParams, $http, InterviewDataService) {
             this.$http = $http
+            this.$routeParams = $routeParams
             this.InterviewDataService = InterviewDataService
         }
 
         $onInit() {
-            this.InterviewDataService.index((result) => {
-                this.interview = result.data
-                console.log(this.animals)
+            this.InterviewDataService.showByTitle(this.$routeParams.id, (result) => {
+                console.log('the result is', result)
             })
         }
     }
 
     angular.module('animalCollectiveApp')
         .component('interview', {
-            templateUrl: 'app/main/interviews/interview.html',
+            templateUrl: 'app/main/interview/interview.html',
             controller: InterviewController,
             controllerAs: 'interview'
         })

@@ -4,11 +4,12 @@
 
     class MainController {
 
-        constructor($scope, $rootScope, $http, AnimalDataService) {
+        constructor($scope, $rootScope, $http, AnimalDataService, InterviewDataService) {
             this.$http = $http
             this.$scope = $scope
-            this.$rootScope = $rootScope
+
             this.AnimalDataService = AnimalDataService
+            this.InterviewDataService = InterviewDataService
         }
 
         $onInit() {
@@ -17,7 +18,9 @@
                 console.log(this.animals)
             })
 
-            // this.$rootScope.activePromises = this.$http.get('/api/animal')
+            this.InterviewDataService.index((result) => {
+                this.interviews = result.data
+            })
         }
     }
 
