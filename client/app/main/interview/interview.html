@@ -1,1 +1,18 @@
 <navbar></navbar>
+<section class="hero" style="background-image:url('{{interview.idata.images[0].animal}}')"></section>
+<section class="interview_main">
+    <div class="container">
+        <div class="interview_main_owner">
+        	<img ng-src="{{interview.idata.images[0].owner}}" alt="">
+        </div>
+        <div class="interview_main_article">
+        	<h1 class="interview_main_article--title">{{interview.idata.title}}</h1>
+        	<p class="interview_main_article--date">{{interview.idata.date | date:'MM-dd-yyyy'}}</p>
+        	<p class="interview_main_article--excerpt">{{interview.idata.excerpt}}</p>
+        	<article class="interview_main_article__qa" ng-repeat="items in interview.idata.article">
+        		<p>{{items.question}}</p>
+        		<p>{{items.answer}}</p>
+        	</article>
+        </div>
+    </div>
+</section>

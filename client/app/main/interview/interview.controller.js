@@ -12,7 +12,7 @@
 
         $onInit() {
             this.InterviewDataService.showByTitle(this.$routeParams.id, (result) => {
-                console.log('the result is', result)
+                this.idata = result.data;
             })
         }
     }

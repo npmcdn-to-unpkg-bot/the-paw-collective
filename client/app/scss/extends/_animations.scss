@@ -1,9 +1,6 @@
 // _animations.scss
-
 ////= Animation/Transition Classes and Placeholders
 //======================================================================//
-
-
 .animated {
     -webkit-animation-duration: .5s;
     -moz-animation-duration: .5s;
@@ -20,7 +17,6 @@
     0% {
         -webkit-transform: translateY(-100%)
     }
-
     100% {
         -webkit-transform: translateY(0)
     }
@@ -30,7 +26,6 @@
     0% {
         -moz-transform: translateY(-100%)
     }
-
     100% {
         -moz-transform: translateY(0)
     }
@@ -40,7 +35,6 @@
     0% {
         -o-transform: translateY(-100%)
     }
-
     100% {
         -o-transform: translateY(0)
     }
@@ -50,7 +44,6 @@
     0% {
         transform: translateY(-100%)
     }
-
     100% {
         transform: translateY(0)
     }
@@ -67,7 +60,6 @@
     0% {
         -webkit-transform: translateY(0)
     }
-
     100% {
         -webkit-transform: translateY(-100%)
     }
@@ -77,7 +69,6 @@
     0% {
         -moz-transform: translateY(0)
     }
-
     100% {
         -moz-transform: translateY(-100%)
     }
@@ -87,7 +78,6 @@
     0% {
         -o-transform: translateY(0)
     }
-
     100% {
         -o-transform: translateY(-100%)
     }
@@ -97,7 +87,6 @@
     0% {
         transform: translateY(0)
     }
-
     100% {
         transform: translateY(-100%)
     }
@@ -114,7 +103,6 @@
     0% {
         -webkit-transform: perspective(400px) rotateX(-90deg)
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(0deg)
     }
@@ -124,7 +112,6 @@
     0% {
         -moz-transform: perspective(400px) rotateX(-90deg)
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(0deg)
     }
@@ -134,7 +121,6 @@
     0% {
         -o-transform: perspective(400px) rotateX(-90deg)
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(0deg)
     }
@@ -144,7 +130,6 @@
     0% {
         transform: perspective(400px) rotateX(-90deg)
     }
-
     100% {
         transform: perspective(400px) rotateX(0deg)
     }
@@ -170,7 +155,6 @@
     0% {
         -webkit-transform: perspective(400px) rotateX(0deg)
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(-90deg)
     }
@@ -180,7 +164,6 @@
     0% {
         -moz-transform: perspective(400px) rotateX(0deg)
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(-90deg)
     }
@@ -190,7 +173,6 @@
     0% {
         -o-transform: perspective(400px) rotateX(0deg)
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(-90deg)
     }
@@ -200,7 +182,6 @@
     0% {
         transform: perspective(400px) rotateX(0deg)
     }
-
     100% {
         transform: perspective(400px) rotateX(-90deg)
     }
@@ -223,7 +204,6 @@
         -webkit-transform: perspective(400px) rotateX(90deg);
         opacity: 0
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(0deg);
         opacity: 1
@@ -235,7 +215,6 @@
         -moz-transform: perspective(400px) rotateX(90deg);
         opacity: 0
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(0deg);
         opacity: 1
@@ -247,7 +226,6 @@
         -o-transform: perspective(400px) rotateX(90deg);
         opacity: 0
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(0deg);
         opacity: 1
@@ -259,7 +237,6 @@
         transform: perspective(400px) rotateX(90deg);
         opacity: 0
     }
-
     100% {
         transform: perspective(400px) rotateX(0deg);
         opacity: 1
@@ -282,7 +259,6 @@
         -webkit-transform: perspective(400px) rotateX(0deg);
         opacity: 1
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(90deg);
         opacity: 0
@@ -294,7 +270,6 @@
         -moz-transform: perspective(400px) rotateX(0deg);
         opacity: 1
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(90deg);
         opacity: 0
@@ -306,7 +281,6 @@
         -o-transform: perspective(400px) rotateX(0deg);
         opacity: 1
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(90deg);
         opacity: 0
@@ -318,7 +292,6 @@
         transform: perspective(400px) rotateX(0deg);
         opacity: 1
     }
-
     100% {
         transform: perspective(400px) rotateX(90deg);
         opacity: 0
@@ -341,16 +314,13 @@
         opacity: 0;
         -webkit-transform: translateY(-200px)
     }
-
     60% {
         opacity: 1;
         -webkit-transform: translateY(30px)
     }
-
     80% {
         -webkit-transform: translateY(-10px)
     }
-
     100% {
         -webkit-transform: translateY(0)
     }
@@ -361,16 +331,13 @@
         opacity: 0;
         -moz-transform: translateY(-200px)
     }
-
     60% {
         opacity: 1;
         -moz-transform: translateY(30px)
     }
-
     80% {
         -moz-transform: translateY(-10px)
     }
-
     100% {
         -moz-transform: translateY(0)
     }
@@ -381,16 +348,13 @@
         opacity: 0;
         -o-transform: translateY(-200px)
     }
-
     60% {
         opacity: 1;
         -o-transform: translateY(30px)
     }
-
     80% {
         -o-transform: translateY(-10px)
     }
-
     100% {
         -o-transform: translateY(0)
     }
@@ -401,16 +365,13 @@
         opacity: 0;
         transform: translateY(-200px)
     }
-
     60% {
         opacity: 1;
         transform: translateY(30px)
     }
-
     80% {
         transform: translateY(-10px)
     }
-
     100% {
         transform: translateY(0)
     }
@@ -427,12 +388,10 @@
     0% {
         -webkit-transform: translateY(0)
     }
-
     30% {
         opacity: 1;
         -webkit-transform: translateY(20px)
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translateY(-200px)
@@ -443,12 +402,10 @@
     0% {
         -moz-transform: translateY(0)
     }
-
     30% {
         opacity: 1;
         -moz-transform: translateY(20px)
     }
-
     100% {
         opacity: 0;
         -moz-transform: translateY(-200px)
@@ -459,12 +416,10 @@
     0% {
         -o-transform: translateY(0)
     }
-
     30% {
         opacity: 1;
         -o-transform: translateY(20px)
     }
-
     100% {
         opacity: 0;
         -o-transform: translateY(-200px)
@@ -475,12 +430,10 @@
     0% {
         transform: translateY(0)
     }
-
     30% {
         opacity: 1;
         transform: translateY(20px)
     }
-
     100% {
         opacity: 0;
         transform: translateY(-200px)
@@ -494,3 +447,23 @@
     animation-name: bounceOutUp
 }
 
+.fader {
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+    -moz-transition: all 0.4s ease-in-out 0.2s;
+    -o-transition: all 0.4s ease-in-out 0.2s;
+    transition: all 0.4s ease-in-out 0.2s;
+}
+
+.fader.ng-enter,
+.fader.ng-leave-active,
+.ng-hide {
+    //use .ng-leave-active
+    opacity: 0;
+    height: 0px;
+}
+
+.ng-enter-active,
+.ng-leave {
+    //use .ng-leave
+    opacity: 1;
+}

@@ -1,36 +1,49 @@
-.interview-box {
-    &--title {
-        padding: 20px 0;
-        font-size: 1.2em;
-    }
-    &--editor {
-        height: auto;
-        min-height: 70px;
-        line-height: 1.3em;
-        outline: none;
-    }
-    &-questions {
-        padding: 20px;
-        height: auto;
-        border: 1px solid rgb(227, 227, 227);
-        margin-bottom: 10px;
-    }
-}
+.interview_main {
 
-.interview-add-btn {
-    background: $primary-color;
-    border-radius: 200%;
-    padding: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    @include transition(all 0.2s ease-in-out);
-    &:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    }
-}
+	padding:90px 0;
 
-.interview-remove-btn {
-    color: red;
-    font-weight: bolder;
-    letter-spacing: 0.01em;
-    padding-top: 10px;
+	&_owner {
+		@include span(3 of 12);
+		img {
+			width:90%;
+		}
+	}
+	&_article {
+		@include span(6 of 12);
+
+		&--title {
+			font-size: 3em;
+			letter-spacing:0.04em;
+			padding: 0 0 20px 0;
+			font-weight:600;
+		}
+		&--date {
+			padding-bottom: 30px;
+			font-size: 0.9em;
+			color: rgb(138, 138, 138);
+		}
+		&--excerpt {
+			font-size: 0.9em;
+			line-height: 1.7em;
+		}
+
+		// question & answers
+		&__qa {
+			padding: 15px 50px 15px 0px;
+
+			p {
+				&:first-of-type {
+					color:#A5A6AD;
+					font-weight:bolder;
+					text-transform:uppercase;
+					padding:15px 0;
+					line-height:1.5em;
+				}
+				&:last-of-type {
+					font-size: 0.9em;
+					line-height: 1.7em;
+				}
+			}
+		}
+	}
 }

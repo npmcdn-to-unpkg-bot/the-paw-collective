@@ -9,6 +9,7 @@ angular.module('animalCollectiveApp', [
         'animalCollectiveApp.animals',
         'ngCookies',
         'ngResource',
+        'ngAnimate', 
         'ngSanitize',
         'ngRoute',
         'ngFileUpload',
