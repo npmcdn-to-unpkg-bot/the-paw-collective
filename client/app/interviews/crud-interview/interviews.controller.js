@@ -8,6 +8,8 @@
             this.InterviewDataService = InterviewDataService
             this.articles = []
 
+            console.log('interview', InterviewDataService)
+
             $rootScope.title = "Create an Interview"
         }
 
@@ -26,6 +28,7 @@
                 animal_thumbnail: this.myArray[1].dataURI,
                 owner: ownerCroppedData
             }
+
 
             this.InterviewDataService.upload(data, photos, this.articles, (result) => {
                 this.indicatorStatus = 'Finished!'

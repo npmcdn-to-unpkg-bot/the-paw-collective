@@ -42,6 +42,7 @@
                 interview = {
                     title: data.title,
                     owner: data.ownerName,
+                    excerpt: data.excerpt,
                     animal: data.animal,
                     images: imageArray,
                     article: articles,

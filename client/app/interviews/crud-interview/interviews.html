@@ -8,6 +8,7 @@
                     <input type="text" ng-model="data.name" placeholder="Name" class="ac-label default" required/>
                     <input type="text" ng-model="data.ownerName" placeholder="Owner's Name" class="ac-label default" required/>
                     <input type="text" ng-model="data.animal" placeholder="Animal's Name" class="ac-label default" required/>
+                    <textarea ng-model="data.excerpt" placeholder="A little short description about the interview" class="ac-label default" cols="30" rows="10" required></textarea>
                     <p class="drop-box--subtitle">Photo of the animal</p>
                     <div ngf-drop ngf-select ng-model="adminInterview.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'" image-placeholder>
                         <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -28,7 +29,7 @@
                         <p>Drag and drop your image here or click to select your image</p>
                     </div>
                     <div ngf-drop ng-model="adminInterview.file" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : adminInterview.removeImagePlaceholder}">
-                        <img-crop image="adminInterview.file  | ngfDataUrl" area-type="rectangle" aspect-ratio="1.7" result-image="animalCroppedData" result-image-size="[ {w: 1252,h: 574}, {w: 294, h:197}]" result-array-image="adminInterview.myArray" ng-init="animalCroppedData=''" init-max-area="true">
+                        <img-crop image="adminInterview.file  | ngfDataUrl" area-type="rectangle" aspect-ratio="1.7" result-image="animalCroppedData" result-image-size="[ {w: 1252,h: 574}, {w: 548, h:251}]" result-array-image="adminInterview.myArray" ng-init="animalCroppedData=''" init-max-area="true">
                         </img-crop>
                     </div>
                     <p class="drop-box--subtitle">Photo of the owner</p>

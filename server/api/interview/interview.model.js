@@ -6,6 +6,7 @@ var InterviewSchema = new mongoose.Schema({
   title: String,
   owner: String,
   animal: String,
+  excerpt: String,
   images: [{
   		animal: String,
       animal_thumbnail: String,
