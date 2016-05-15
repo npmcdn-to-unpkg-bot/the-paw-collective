@@ -54,7 +54,7 @@
             color: white;
             text-transform: uppercase;
             text-align: center;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.3em;
 
             // Responsive Breakpoints
             @include breakpoint(md) {

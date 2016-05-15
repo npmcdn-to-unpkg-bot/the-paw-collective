@@ -10,32 +10,32 @@
     </div>
     <div class="hero_title">
         <h1>The Paw Collective</h1>
-        <p>interviews & collection <br>of
-            famous dogs</p>
+        <p>interviews & collection
+            <br>of famous dogs</p>
     </div>
 </section>
 <section class="collective">
     <div class="container">
-    
         <div class="subtitle_box">
             <p>Interviews</p>
         </div>
-
         <div class="featured_interviews">
-            <div class="featured_interviews__items" ng-repeat="item in main.interviews">
-                <a href="/interview/{{item.title | slugify}}"><div class="featured_interviews__items--banner" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div></a>
+            <div class="featured_interviews__items" ng-repeat="item in main.interviews | limitTo: 2">
+                <div class="featured_interviews__items__wrap">
+                    <a href="/interview/{{item.title | slugify}}">
+                        <div class="featured_interviews__items__wrap--banner zoomin" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
+                    </a>
+                </div>
                 <article class="featured_interviews__items--article">
                     <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
                     <p>{{item.excerpt}}</p>
                 </article>
             </div>
         </div>
-
         <div class="seperator"></div>
         <div class="subtitle_box">
             <p>Animals</p>
         </div>
-        
         <div class="filter_wrapper">
             <div class="form-select">
                 <select name="" id="">
@@ -54,7 +54,8 @@
                             <p>@{{item.instagram}}</p>
                         </article>
                     </div>
-                    <div class="gallery_home--items---image" style="background-image:url('{{item.image}}');">
+                    <div class="gallery_home--items__wrap">
+                        <div class="gallery_home--items__wrap---image" style="background-image:url('{{item.image}}');"></div>
                     </div>
                 </li>
             </ul>
