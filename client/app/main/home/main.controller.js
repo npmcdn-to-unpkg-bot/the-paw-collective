@@ -4,7 +4,7 @@
 
     class MainController {
 
-        constructor($scope, $rootScope, $http, $window, AnimalDataService, InterviewDataService) {
+        constructor($scope, $http, $window, AnimalDataService, InterviewDataService) {
             this.$http = $http
             this.$scope = $scope
             this.$window = $window

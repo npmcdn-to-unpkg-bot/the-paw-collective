@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="animalCollectiveApp">
 <head>
     <!------------------------------------------------------------------------------
 
@@ -14,12 +14,20 @@
 
 
     <!-- Commence. -->
+    <meta name="fragment" content="!">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
     <title>The Paw Collective</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <!-- OG. -->
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="" />
+    <meta property="og:description"        content="" />
+    <meta property="og:image"              content="" />
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
     <!-- bower:css -->
@@ -36,10 +44,10 @@
     <!-- endbuild -->
 </head>
 
-<body ng-app="animalCollectiveApp">
+<body>
 <!--     <navbar></navbar>
  -->    
-
+    {{hello}}
  <div ng-view="" class="fader" autoscroll="true"></div>
 
 <!--     <footer></footer>

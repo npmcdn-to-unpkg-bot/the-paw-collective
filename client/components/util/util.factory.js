@@ -7,9 +7,9 @@
 
     .factory('theInterceptor', theInterceptor)
 
-    theInterceptor.$inject = ['$rootScope', '$q']
+    theInterceptor.$inject = ['$rootScope', '$q', '$timeout']
 
-    function theInterceptor($rootScope, $q) {
+    function theInterceptor($rootScope, $q, $timeout) {
         return {
             request: onRequest,
             response: onResponse,
@@ -20,6 +20,7 @@
             if (response.config && response.config.defer) {
                 response.config.defer.reject()
             }
+
             return $q.reject(response)
         }
 
@@ -27,6 +28,7 @@
             if (response.config && response.config.defer) {
                 response.config.defer.resolve()
             }
+
             return $q.when(response)
         }
 
@@ -46,6 +48,7 @@
                 angular.forEach($rootScope.activePromises, function(promise, index) {
                     if (promise === defer.promise) {
                         $rootScope.activePromises.splice(index, 1)
+
                     }
                 })
             })
