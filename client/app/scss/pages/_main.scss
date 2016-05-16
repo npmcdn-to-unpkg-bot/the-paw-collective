@@ -163,6 +163,11 @@ $map-portifolio: ( gutters: 0.1);
             height:258px;
             overflow:hidden;
 
+            // Responsive Breakpoint
+            @include breakpoint(sm) {
+                height: 200px;
+            }
+
             &--banner {
                 background: RGB(145, 147, 159);
                 background-size:cover;

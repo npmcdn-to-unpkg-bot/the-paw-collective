@@ -37,7 +37,7 @@
             <div class="subtitle_box">
                 <p>Animals</p>
             </div>
-            <div class="filter_wrapper">
+           <!--  <div class="filter_wrapper">
                 <div class="form-select">
                     <select name="" id="">
                         <option value="" disabled="disabled" selected="selected">Filter By</option>
@@ -45,10 +45,10 @@
                         <option>Last Added</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
             <div class="gallery_home">
                 <ul>
-                    <li class="gallery_home--items" ng-repeat="item in main.animals">
+                    <li class="gallery_home--items" ng-repeat="item in main.animals |  orderBy:main.orderBy">
                         <div class="gallery_home--items---overlay" ng-click="main.openTab(item.instagram)">
                             <article>
                                 <p>{{item.name}}</p>

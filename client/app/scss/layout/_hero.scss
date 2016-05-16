@@ -10,7 +10,7 @@
 
     // Responsive Breakpoints
     @include breakpoint(md){
-        height:200px;
+        height:400px;
         padding: 20px 0;
     }
 
@@ -33,7 +33,7 @@
         // Responsive Breakpoints
         @include breakpoint(md) {
             width:60%;
-            height:84%;
+            height:92%;
         }
         @include breakpoint(sm) {
             width:60%;

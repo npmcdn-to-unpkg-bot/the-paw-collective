@@ -52,7 +52,7 @@
 			color: rgb(138, 138, 138);
 		}
 		&--excerpt {
-			font-size: 0.9em;
+			font-size: 1.3em;
 			line-height: 1.7em;
 			// Responsive Breakpoint
 			@include breakpoint(sm) {
