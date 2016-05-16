@@ -33,5 +33,11 @@ angular.module('animalCollectiveApp', [
     .run(($rootScope) => {
         $rootScope.activePromises = []
     })
+    .value('cgBusyDefaults', {
+        message: 'Loading',
+        backdrop: true,
+        delay:10,
+        minDuration: 1500
+    })
 
 

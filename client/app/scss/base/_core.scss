@@ -22,16 +22,16 @@ a {
     color: inherit;
 }
 
-main {
-    padding-top:70px;
-}
-
 select {
     border-bottom: 1px solid #e1e1e1;
     width: 100%;
     padding: 13px 5px;
     font-size: 0.9em;
     letter-spacing: 0.07em;
+}
+
+.tpc_busy {
+    padding-top:70px;
 }
 
 input.ng-untouched {
@@ -51,4 +51,11 @@ input.ng-valid-required.ng-valid-parse {
 
 input.ng-invalid.ng-valid-parse {
     border-bottom: 1px solid rgba(255, 0, 0, 0.14);
+}
+
+// Plugin Override
+
+.cg-busy-backdrop {
+    background-color:white;
+    opacity:.9;
 }
