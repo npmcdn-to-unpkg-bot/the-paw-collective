@@ -15,6 +15,11 @@ body {
 
 .container {
     @include container();
+
+    // Responsive Breakpoints
+    @include breakpoint(sm) {
+        @include container(90%);
+    }
 }
 
 a {
@@ -32,6 +37,10 @@ select {
 
 .tpc_busy {
     padding-top:70px;
+    // Responsive Breakpoint
+    @include breakpoint(sm) {
+        padding-top: 60px;
+    }
 }
 
 input.ng-untouched {

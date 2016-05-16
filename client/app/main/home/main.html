@@ -48,7 +48,7 @@
             <div class="gallery_home">
                 <ul>
                     <li class="gallery_home--items" ng-repeat="item in main.animals">
-                        <div class="gallery_home--items---overlay" ng-mousedown="main.openTab(item.instagram)">
+                        <div class="gallery_home--items---overlay" ng-click="main.openTab(item.instagram)">
                             <article>
                                 <p>{{item.name}}</p>
                                 <p>@{{item.instagram}}</p>

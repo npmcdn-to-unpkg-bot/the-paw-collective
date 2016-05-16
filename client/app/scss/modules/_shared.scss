@@ -63,6 +63,9 @@ input.ac-button,
     @include breakpoint(md) {
         padding:10px 0;
     }
+    @include breakpoint(sm) {
+        padding:0 0;
+    }
 }
 
 .subtitle_box {
