@@ -4,9 +4,10 @@
 
     class MainController {
 
-        constructor($scope, $rootScope, $http, AnimalDataService, InterviewDataService) {
+        constructor($scope, $rootScope, $http, $window, AnimalDataService, InterviewDataService) {
             this.$http = $http
             this.$scope = $scope
+            this.$window = $window
 
             this.AnimalDataService = AnimalDataService
             this.InterviewDataService = InterviewDataService
@@ -21,6 +22,10 @@
             this.InterviewDataService.index((result) => {
                 this.interviews = result.data
             })
+        }
+
+        openTab(id) {
+            this.$window.open(`http://www.instagram.com/${id}`, '_blank')
         }
     }
 

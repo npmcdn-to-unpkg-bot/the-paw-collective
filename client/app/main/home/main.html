@@ -1,67 +1,65 @@
 <div class="tpc_busy" cg-busy="{promise:$root.activePromises}">
-
-<div class="side">
-    <div class="side__left">
-        <p>The Paw Collective</p>
-    </div>
-</div>
-<navbar></navbar>
-<section class="hero">
-    <div class="hero_innerbox">
-    </div>
-    <div class="hero_title">
-        <h1>The Paw Collective</h1>
-        <p>interviews & collection
-            <br>of famous dogs</p>
-    </div>
-</section>
-<section class="collective">
-    <div class="container">
-        <div class="subtitle_box">
-            <p>Interviews</p>
+    <div class="side">
+        <div class="side__left">
+            <p>The Paw Collective</p>
         </div>
-        <div class="featured_interviews">
-            <div class="featured_interviews__items" ng-repeat="item in main.interviews | limitTo: 2">
-                <div class="featured_interviews__items__wrap">
-                    <a href="/interview/{{item.title | slugify}}">
-                        <div class="featured_interviews__items__wrap--banner zoomin" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
-                    </a>
+    </div>
+    <navbar></navbar>
+    <section class="hero">
+        <div class="hero_innerbox">
+        </div>
+        <div class="hero_title">
+            <h1>The Paw Collective</h1>
+            <p>interviews & collection
+                <br>of famous dogs</p>
+        </div>
+    </section>
+    <section class="collective">
+        <div class="container">
+            <div class="subtitle_box">
+                <p>Interviews</p>
+            </div>
+            <div class="featured_interviews">
+                <div class="featured_interviews__items" ng-repeat="item in main.interviews | limitTo: 2">
+                    <div class="featured_interviews__items__wrap">
+                        <a href="/interview/{{item.title | slugify}}">
+                            <div class="featured_interviews__items__wrap--banner zoomin" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
+                        </a>
+                    </div>
+                    <article class="featured_interviews__items--article">
+                        <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
+                        <p>{{item.excerpt}}</p>
+                    </article>
                 </div>
-                <article class="featured_interviews__items--article">
-                    <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
-                    <p>{{item.excerpt}}</p>
-                </article>
+            </div>
+            <div class="seperator"></div>
+            <div class="subtitle_box">
+                <p>Animals</p>
+            </div>
+            <div class="filter_wrapper">
+                <div class="form-select">
+                    <select name="" id="">
+                        <option value="" disabled="disabled" selected="selected">Filter By</option>
+                        <option>Name</option>
+                        <option>Last Added</option>
+                    </select>
+                </div>
+            </div>
+            <div class="gallery_home">
+                <ul>
+                    <li class="gallery_home--items" ng-repeat="item in main.animals">
+                        <div class="gallery_home--items---overlay" ng-mousedown="main.openTab(item.instagram)">
+                            <article>
+                                <p>{{item.name}}</p>
+                                <p>@{{item.instagram}}</p>
+                            </article>
+                        </div>
+                        <div class="gallery_home--items__wrap">
+                            <div class="gallery_home--items__wrap---image" style="background-image:url('{{item.image}}');"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="seperator"></div>
-        <div class="subtitle_box">
-            <p>Animals</p>
-        </div>
-        <div class="filter_wrapper">
-            <div class="form-select">
-                <select name="" id="">
-                    <option value="" disabled="disabled" selected="selected">Filter By</option>
-                    <option>Name</option>
-                    <option>Last Added</option>
-                </select>
-            </div>
-        </div>
-        <div class="gallery_home">
-            <ul>
-                <li class="gallery_home--items" ng-repeat="item in main.animals">
-                    <div class="gallery_home--items---overlay">
-                        <article>
-                            <p>{{item.name}}</p>
-                            <p>@{{item.instagram}}</p>
-                        </article>
-                    </div>
-                    <div class="gallery_home--items__wrap">
-                        <div class="gallery_home--items__wrap---image" style="background-image:url('{{item.image}}');"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
+    </section>
 </div>
