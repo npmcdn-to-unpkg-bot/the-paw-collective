@@ -28,7 +28,8 @@
                     </div>
                     <article class="featured_interviews__items--article">
                         <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
-                        <p>{{item.excerpt}}</p>
+                        <p class="featured_interviews__items--article---excerpt">{{item.excerpt}}</p>
+                        <p class="featured_interviews__items--article---readmore"><a href="/interview/{{item.title | slugify}}">Read More</a></p>
                     </article>
                 </div>
             </div>
