@@ -20,7 +20,5 @@ $susy: (
 
 // Component styles are injected through grunt
 /* inject:scss */
-@import '../components/footer/footer-admin.scss';
-@import '../components/footer/footer.scss';
 @import 'scss/package.scss';
 /* endinject */

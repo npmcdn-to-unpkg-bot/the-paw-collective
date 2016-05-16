@@ -1,17 +1,19 @@
 .side {
-    position: fixed;
+    position: absolute;
     left: -2%;
     top: 40%;
 
     // Responsive Breakpoints
     @include breakpoint(md) {
         display:none;
+        left: -5%;
     }
     
     &__left {
         @include transform(rotate(-90deg));
         text-transform: uppercase;
-        color: #a7a7a7;
+        color: #1c1c1c;
+        font-size: 0.9em;
         letter-spacing:0.2em;
         -webkit-transform-style: preserve-3d;
         -webkit-backface-visibility: hidden;
