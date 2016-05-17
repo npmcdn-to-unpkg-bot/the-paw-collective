@@ -48,7 +48,6 @@
                 angular.forEach($rootScope.activePromises, function(promise, index) {
                     if (promise === defer.promise) {
                         $rootScope.activePromises.splice(index, 1)
-
                     }
                 })
             })

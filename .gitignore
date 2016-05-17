@@ -9,3 +9,6 @@ e2e
 /server/config/local.env.js
 npm-debug.log
 coverage
+ngrok
+.ngrok
+./ngrok

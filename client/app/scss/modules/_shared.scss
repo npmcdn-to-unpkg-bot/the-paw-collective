@@ -66,7 +66,14 @@ input.ac-button,
     @include breakpoint(sm) {
         padding:0 0;
     }
+
+    &--small {
+        width: 5%;
+        border-bottom: 2px solid black;
+        padding: 10px 0;
+    }
 }
+
 
 .subtitle_box {
     text-align: center;
@@ -78,5 +85,36 @@ input.ac-button,
     // Responsive Breakpoint
     @include breakpoint(md) {
         padding:30px 0;
+    }
+}
+
+.share_component {
+    &--title {
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        color: rgb(67, 67, 67);
+    }
+
+    &__icons {
+
+        svg {
+            &:first-of-type {
+                padding-right:10px;
+                // Responsive Breakpoint
+                @include breakpoint(sm) {
+                    padding-right:20px;
+                }
+            }
+        }
+        &--fb, &--tw {
+            fill:#A2A2A2;
+            cursor:pointer;
+            @include transition(fill 0.3s ease-in-out);
+            &:hover {
+                fill:#4D4D4D;
+                @include transition(fill 0.3s ease-in-out);
+            }
+        }
     }
 }

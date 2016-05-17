@@ -118,6 +118,7 @@
     left: 0;
     top: 0;
     background:white;
+    border-bottom: 1px solid #d8d8d8;
 
     nav {
         @include display(flex);

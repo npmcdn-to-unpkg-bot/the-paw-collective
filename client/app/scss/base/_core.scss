@@ -2,9 +2,11 @@
 // 
 body {
     font-family: $font-stack-mark;
-    background: #FAFAF3;
+    background: RGB(248, 248, 248);
     -webkit-backface-visibility: hidden;
 
+    // lightbeige FAFAF3
+    // desertstorm RGB(248, 248, 248)
 }
 
 * {

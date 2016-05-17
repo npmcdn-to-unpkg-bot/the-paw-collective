@@ -69,15 +69,15 @@ export default function(app) {
     app.set('appPath', path.join(config.root, 'client'))
 
     if ('production' === env) {
-        app.use(require('prerender-node'));
+        app.use(require('prerender-node'))
         app.use(favicon(path.join(config.root, 'client', 'favicon.ico')))
         app.use(express.static(app.get('appPath')))
         app.use(morgan('dev'))
     }
 
     if ('development' === env) {
-        app.use(require('prerender-node'));
-
+        app.use(require('connect-livereload')())
+        // app.use(require('prerender-node'))
     }
 
     if ('development' === env || 'test' === env) {

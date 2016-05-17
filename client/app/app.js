@@ -9,7 +9,7 @@ angular.module('animalCollectiveApp', [
         'animalCollectiveApp.animals',
         'ngCookies',
         'ngResource',
-        'ngAnimate', 
+        'ngAnimate',
         'ngSanitize',
         'ngRoute',
         'ngFileUpload',
@@ -32,12 +32,13 @@ angular.module('animalCollectiveApp', [
     })
     .run(($rootScope) => {
         $rootScope.activePromises = []
+
+        $rootScope.title = 'Title'
+        $rootScope.description = 'Description will go here'
     })
     .value('cgBusyDefaults', {
         message: 'Loading',
         backdrop: true,
-        delay:10,
-        minDuration: 1500
+        delay: 10,
+        minDuration: 1000
     })
-
-
