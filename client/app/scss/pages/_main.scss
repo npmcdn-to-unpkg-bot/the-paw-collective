@@ -192,11 +192,11 @@ $map-portifolio: ( gutters: 0.1);
             top: -30px;
             padding-bottom: 40px;
             padding-left: 30px;
-            min-height: 230px;
+            min-height: 190px;
             padding-right: 20px;
 
             h1 {
-                padding: 30px 0;
+                padding: 30px 0 20px 0;
                 font-size: 1.5em;
                 font-weight: 600;
                 letter-spacing: 0.07em;
@@ -208,9 +208,15 @@ $map-portifolio: ( gutters: 0.1);
 
             &---excerpt {
                 line-height: 1.7em;
-                font-weight:lighter;
-                padding-right:30px;
-                font-size:0.9em;
+                font-weight: lighter;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical; 
+                padding-right: 30px;
+                font-size: 0.9em;
+                height: 70px;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 // Responsive Breakpoint
                 @include breakpoint(sm) {
                     padding-right:0;

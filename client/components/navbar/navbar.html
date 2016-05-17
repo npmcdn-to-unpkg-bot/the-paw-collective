@@ -1,4 +1,4 @@
-<header headroom  tolerance='5' offset='250' classes="{pinned:'slideDown',unpinned:'slideUp',initial:'animated'}" class="main">
+<header headroom tolerance='5' offset='250' classes="{pinned:'slideDown',unpinned:'slideUp',initial:'animated'}" class="main">
     <div class="container">
         <nav>
             <div class="logo">
@@ -9,6 +9,20 @@
                 <li class="main_navigation--items" ng-class="{ active: nav.isActive('/interviews')}"><a href="/interviews">Interviews</a></li>
                 <li class="main_navigation--items" ng-class="{ active: nav.isActive('/about')}"><a href="/about">About</a></li>
             </ul>
+            <div class="menu_component" mobile-menu>
+                <div class="menu_component__items">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="menu_component__list">
+                    <ul>
+                        <li><a href="#">Animals</a></li>
+                        <li><a href="#">Interviews</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </div>
 </header>
