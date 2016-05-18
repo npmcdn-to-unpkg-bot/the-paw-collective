@@ -18,7 +18,8 @@ angular.module('animalCollectiveApp', [
         'validation.match',
         'angular-medium-editor',
         'headroom',
-        'cgBusy'
+        'cgBusy',
+        'updateMeta'
     ])
     .config(($routeProvider, $locationProvider, $compileProvider) => {
         $compileProvider.debugInfoEnabled(false)
@@ -32,9 +33,6 @@ angular.module('animalCollectiveApp', [
     })
     .run(($rootScope) => {
         $rootScope.activePromises = []
-
-        $rootScope.title = 'Title'
-        $rootScope.description = 'Description will go here'
     })
     .value('cgBusyDefaults', {
         message: 'Loading',
