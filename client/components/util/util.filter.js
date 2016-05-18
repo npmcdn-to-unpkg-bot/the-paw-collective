@@ -13,6 +13,6 @@
         }
     }
 
-    angular.module('animalCollectiveApp.util')
+    angular.module('paw_collective.util')
         .filter('slugify', slugify)
 })()

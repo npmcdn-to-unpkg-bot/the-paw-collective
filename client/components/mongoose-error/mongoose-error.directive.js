@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('animalCollectiveApp')
+angular.module('paw_collective')
     .directive('mongooseError', function() {
         return {
             restrict: 'A',

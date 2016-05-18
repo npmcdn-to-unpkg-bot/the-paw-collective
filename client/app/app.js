@@ -1,12 +1,12 @@
 'use strict'
 
-angular.module('animalCollectiveApp', [
-        'animalCollectiveApp.auth',
-        'animalCollectiveApp.admin',
-        'animalCollectiveApp.constants',
-        'animalCollectiveApp.dashboard',
-        'animalCollectiveApp.interview',
-        'animalCollectiveApp.animals',
+angular.module('paw_collective', [
+        'paw_collective.auth',
+        'paw_collective.admin',
+        'paw_collective.constants',
+        'paw_collective.dashboard',
+        'paw_collective.interview',
+        'paw_collective.animals',
         'ngCookies',
         'ngResource',
         'ngAnimate',

@@ -14,13 +14,18 @@
         width:100%;
         height:100%;
         background: rgba(0, 0, 0, 0.09);
-        margin-top:-60px;
+        margin-top: -33px;
         z-index:1;
+
+        // Responsive Breakpoint
+        @include breakpoint(sm) {
+            margin-top:-20px;
+        }
     }
 
     // Responsive Breakpoints
     @include breakpoint(md){
-        height:400px;
+        height:350px;
         padding: 20px 0;
     }
 
@@ -101,6 +106,11 @@
                 line-height:1.6em;
                 font-size:0.8em;
             }
+        }
+
+        // Responsive Breakpoint
+        @include breakpoint(sm) {
+            height:80%;
         }
     }
 }

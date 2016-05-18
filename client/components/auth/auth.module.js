@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('animalCollectiveApp.auth', [
-        'animalCollectiveApp.constants',
-        'animalCollectiveApp.util',
+angular.module('paw_collective.auth', [
+        'paw_collective.constants',
+        'paw_collective.util',
         'ngCookies',
         'ngRoute'
     ])

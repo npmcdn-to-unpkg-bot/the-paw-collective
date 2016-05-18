@@ -1,0 +1,50 @@
+
+
+<form name="addAnimalForm">
+    <!-- Name -->
+    <input type="text" ng-model="$ctrl.data.name" placeholder="Name" ng-required="true" class="ac-label default" required/>
+    
+    <!-- Instagram ID -->
+    <input type="text" ng-model="$ctrl.data.instagram" placeholder="Instagram ID" ng-required="true" class="ac-label default" required/>
+    
+    <!-- Animal Category -->
+    <select id="limitType" name="limit" ng-model="$ctrl.data.category" ng-options="v.text as v.text for v in $ctrl.category" ng-init="$ctrl.data.category='Dog'"></select>
+    
+    <!-- Title -->
+    <p class="drop-box--subtitle">Photo of the animal</p>
+    
+    <!-- Animal Image -->
+    <div ngf-drop ngf-change="$ctrl.imageDropped()" ngf-select ng-model="$ctrl.file" name="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" accept="image/*" ngf-pattern="'image/*'">
+        <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Create-Interview" transform="translate(-449.000000, -698.000000)" fill="#C9C9C9">
+                    <g id="Rectangle-27-+-Fill-55" transform="translate(151.000000, 661.000000)">
+                        <g id="ios7-cloud-upload-outline" transform="translate(298.000000, 37.000000)">
+                            <g id="Group">
+                                <path d="M11.5214286,14.3563636 L10.6928571,13.5127273 L16.0142857,8.10909091 L21.3357143,13.5127273 L20.5,14.3563636 L16.6,10.3854545 L16.6,27.9709091 L15.4214286,27.9709091 L15.4214286,10.3854545 L11.5214286,14.3563636 Z" id="Shape"></path>
+                                <path d="M26.2357143,8.77090909 C26.2357143,8.68363636 26.25,8.59636364 26.25,8.50909091 C26.25,3.83272727 22.4785714,0.0436363636 17.9071429,0.0436363636 C14.6142857,0.0436363636 11.7785714,2.01454545 10.45,4.86545455 C9.87142857,4.56727273 9.22857143,4.4 8.53571429,4.4 C6.42142857,4.4 4.67142857,6.11636364 4.32857143,8.18181818 C1.81428571,9.06181818 0,11.5781818 0,14.4581818 C0,18.0727273 2.86428571,21.0181818 6.4,21.0181818 L12.9285714,21.0181818 L12.9285714,19.8545455 L6.45714286,19.8545455 C3.53571429,19.8545455 1.15714286,17.4181818 1.15714286,14.4290909 C1.15714286,12.1163636 2.6,9.97818182 4.74285714,9.22181818 L5.34285714,9.01090909 L5.45,8.37090909 C5.70714286,6.8 7.02857143,5.51272727 8.58571429,5.51272727 C9.07857143,5.51272727 9.56428571,5.62909091 10.0071429,5.86181818 L10.9714286,6.35636364 L11.4357143,5.36 C12.6214286,2.82181818 15.1571429,1.18545455 17.8928571,1.18545455 C21.8428571,1.18545455 25.1,4.33454545 25.1,8.37818182 C25.1,9.34545455 25.0857143,9.85454545 25.0857143,9.85454545 L26.1714286,9.86181818 C28.7857143,9.89818182 30.8571429,12.2909091 30.8571429,14.9745455 C30.8571429,17.6509091 28.7285714,19.84 26.1071429,19.8545455 L25.8785714,19.8545455 L18.9285714,19.8545455 L18.9285714,21.0181818 L26.1428571,21.0181818 L26.1428571,21.0181818 C29.3571429,21.0181818 32,18.3054545 32,14.9963636 C32,11.6872727 29.4642857,8.77818182 26.2357143,8.77090909 L26.2357143,8.77090909 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <p>Drag and drop your image here or click to select your image</p>
+    </div>
+
+    <!-- Animal Image Crop Tool -->
+    <div ngf-drop ng-model="$ctrl.file" ngf-pattern="image/*" class="cropArea" ng-class="{'active' : $ctrl.removeImagePlaceholder}">
+        <img-crop image="$ctrl.file  | ngfDataUrl" area-type="square" result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+        </img-crop>
+    </div>
+    
+    <div class="create-edit-box-left--status">
+        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="$ctrl.save($ctrl.formtype)">
+        <span class="progress-indicator">
+            <p class="progress-indicator--text" ng-show="adminAnimal.exporting">Uploading...</p>
+        </span>
+    </div>
+</form>
+
+

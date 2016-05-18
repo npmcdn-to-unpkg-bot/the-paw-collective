@@ -25,5 +25,5 @@ class NavbarAdminController {
     }
 }
 
-angular.module('animalCollectiveApp')
+angular.module('paw_collective')
     .controller('NavbarAdminController', NavbarAdminController)

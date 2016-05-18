@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="animalCollectiveApp">
+<html ng-app="paw_collective">
 <head>
     <!------------------------------------------------------------------------------
 
@@ -47,15 +47,8 @@
     <!-- endinjector -->
     <!-- endbuild -->
 </head>
-
 <body>
-<!--     <navbar></navbar>
- -->    
-    {{hello}}
- <div ng-view="" class="fader" autoscroll="true"></div>
-
-<!--     <footer></footer>
- -->
+    <div ng-view="" class="fader" autoscroll="true"></div>
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -100,55 +93,53 @@
     <!-- build:js(.tmp) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->
-    <script src="app/admin/admin.module.js"></script>
-    <script src="app/animals/crud-animal/animal.module.js"></script>
-    <script src="app/animals/dashboard/animal-dashboard.module.js"></script>
-    <script src="app/interviews/crud-interview/interviews.module.js"></script>
-    <script src="app/interviews/dashboard/interviews-dashboard.module.js"></script>
+    <script src="app/back/admin/admin.module.js"></script>
+    <script src="app/back/animals/crud-animal/animal.module.js"></script>
+    <script src="app/back/animals/dashboard/animal-dashboard.module.js"></script>
+    <script src="app/back/interviews/crud-interview/interviews.module.js"></script>
+    <script src="app/back/interviews/dashboard/interviews-dashboard.module.js"></script>
     <script src="components/auth/auth.module.js"></script>
     <script src="components/util/util.module.js"></script>
-    <script src="app/main/home/main.controller.js"></script>
-    <script src="app/animals/crud-animal/animal.controller.js"></script>
-    <script src="app/account/settings/settings.controller.js"></script>
-    <script src="app/animals/crud-animal/animal.router.js"></script>
-    <script src="app/animals/crud-animal/animal.service.js"></script>
-    <script src="app/animals/dashboard/animal-dashboard.controller.js"></script>
-    <script src="app/account/signup/signup.controller.js"></script>
-    <script src="app/animals/dashboard/animal-dashboard.router.js"></script>
+    <script src="app/front/interview/interview.js"></script>
+    <script src="app/back/animals/crud-animal/animal.controller.js"></script>
+    <script src="app/back/account/login/login.controller.js"></script>
+    <script src="app/back/animals/crud-animal/animal.router.js"></script>
+    <script src="app/back/animals/dashboard/animal-dashboard.controller.js"></script>
+    <script src="app/back/account/settings/settings.controller.js"></script>
+    <script src="app/back/animals/dashboard/animal-dashboard.router.js"></script>
+    <script src="app/back/interviews/crud-interview/interviews.controller.js"></script>
+    <script src="app/back/account/signup/signup.controller.js"></script>
+    <script src="app/back/interviews/crud-interview/interviews.router.js"></script>
+    <script src="app/back/interviews/dashboard/interviews-dashboard.controller.js"></script>
+    <script src="app/back/admin/admin.controller.js"></script>
+    <script src="app/back/interviews/dashboard/interviews-dashboard.router.js"></script>
+    <script src="app/front/home/home.controller.js"></script>
+    <script src="app/front/home/home.js"></script>
+    <script src="app/front/interview/interview.controller.js"></script>
+    <script src="app/back/account/account.js"></script>
+    <script src="app/front/interviews/interviews.controller.js"></script>
+    <script src="app/front/interviews/interviews.js"></script>
     <script src="app/app.constant.js"></script>
-    <script src="app/interviews/crud-interview/interviews.controller.js"></script>
-    <script src="app/admin/admin.controller.js"></script>
-    <script src="app/interviews/crud-interview/interviews.router.js"></script>
-    <script src="app/interviews/crud-interview/interviews.service.js"></script>
-    <script src="app/interviews/dashboard/interviews-dashboard.controller.js"></script>
-    <script src="app/account/account.js"></script>
-    <script src="app/interviews/dashboard/interviews-dashboard.router.js"></script>
-    <script src="app/account/login/login.controller.js"></script>
-    <script src="app/main/home/main.directive.js"></script>
-    <script src="app/main/home/main.js"></script>
-    <script src="app/main/interview/interview.controller.js"></script>
-    <script src="app/main/interview/interview.js"></script>
-    <script src="app/main/interviews/interviews.controller.js"></script>
-    <script src="app/main/interviews/interviews.js"></script>
-    <script src="app/admin/admin.router.js"></script>
     <script src="components/auth/auth.service.js"></script>
     <script src="components/auth/interceptor.service.js"></script>
     <script src="components/auth/router.decorator.js"></script>
     <script src="components/auth/user.service.js"></script>
     <script src="components/footer/footer.directive.js"></script>
+    <script src="components/form/form.directive.js"></script>
     <script src="components/image-upoad/image-upload.service.js"></script>
     <script src="components/mongoose-error/mongoose-error.directive.js"></script>
     <script src="components/navbar-admin/navbar-admin.controller.js"></script>
     <script src="components/navbar-admin/navbar-admin.directive.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
     <script src="components/navbar/navbar.directive.js"></script>
+    <script src="components/services/animal.service.js"></script>
+    <script src="components/services/interview.service.js"></script>
     <script src="components/util/util.directive.js"></script>
     <script src="components/util/util.factory.js"></script>
     <script src="components/util/util.filter.js"></script>
-    <script src="app/animals/crud-animal/animal-edit.controller.js"></script>
+    <script src="app/back/admin/admin.router.js"></script>
     <script src="components/util/util.service.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->
 </body>
-
 </html>

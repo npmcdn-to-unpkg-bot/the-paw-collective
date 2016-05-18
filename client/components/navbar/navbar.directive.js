@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('animalCollectiveApp')
+angular.module('paw_collective')
     .directive('navbar', () => ({
         templateUrl: 'components/navbar/navbar.html',
         restrict: 'E',
@@ -23,28 +23,10 @@ angular.module('animalCollectiveApp')
 	        		body.toggleClass('no-scroll')
 	        	})
 
-	            // let dropdownElem = angular.element(elem.parent().children()[2]),
-	            //     isOpen = false;
-
-	            // elem.bind('click', (e) => {
-
-	            //     e.stopPropagation()
-	            //     isOpen = true
-
-	            //     if (dropdownElem.hasClass('active')) {
-	            //         dropdownElem.removeClass('active')
-	            //     } else {
-	            //         dropdownElem.addClass('active')
-	            //     }
-	            // })
-
-	            // $document.bind('click', () => {
-	            //     if (isOpen) {
-	            //         dropdownElem.removeClass('active')
-	            //     } else {
-	            //         isOpen = false
-	            //     }
-	            // })
+	        	// // Prevent Memory Leak
+	        	// scope.$on('destroy', () => {
+	        	// 	menuIcon.unbind('click')
+	        	// })
 	        }
 	    }
 	})

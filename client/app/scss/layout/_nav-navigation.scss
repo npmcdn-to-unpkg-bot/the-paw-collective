@@ -119,14 +119,29 @@
     max-width: 75%;
     margin: 0 auto;
 
+    // Responsive Breakpoint
+    @include breakpoint(sm) {
+        max-width:90%;
+    }
+
     &__wrapper {
         margin-top: 0px;
         padding: 20px 0;
         background: white;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
+        // Responsive Breakpoint
+        @include breakpoint(sm) {
+            padding:10px 0;
+        }
+
         > .container {
             @include container(95%);
+
+            // Responsive Breakpoint
+            @include breakpoint(sm) {
+                @include container(85%);
+            }
         }
     }
 

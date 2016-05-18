@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('animalCollectiveApp')
+angular.module('paw_collective')
     .directive('footerMain', function() {
         return {
             templateUrl: 'components/footer/footer.html',

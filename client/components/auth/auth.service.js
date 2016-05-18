@@ -183,7 +183,7 @@
         return Auth
     }
 
-    angular.module('animalCollectiveApp.auth')
+    angular.module('paw_collective.auth')
         .factory('Auth', AuthService)
 
 })()

@@ -1,6 +1,6 @@
 (function() {
     angular
-        .module('animalCollectiveApp.util')
+        .module('paw_collective.util')
         .config(['$httpProvider', function($httpProvider) {
             $httpProvider.interceptors.push('theInterceptor')
         }])

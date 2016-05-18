@@ -22,7 +22,7 @@
         }
     }
 
-    angular.module('animalCollectiveApp.animals')
+    angular.module('paw_collective.animals')
         .service('imageUploader', imageUploader)
 
 })()

@@ -60,7 +60,7 @@ function UtilService($window) {
   return Util
 }
 
-angular.module('animalCollectiveApp.util')
+angular.module('paw_collective.util')
   .factory('Util', UtilService)
 
 })()
