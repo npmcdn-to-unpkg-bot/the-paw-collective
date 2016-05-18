@@ -37,14 +37,6 @@ select {
     letter-spacing: 0.07em;
 }
 
-.tpc_busy {
-    padding-top:70px;
-    // Responsive Breakpoint
-    @include breakpoint(sm) {
-        padding-top: 60px;
-    }
-}
-
 input.ng-untouched {
     background: none;
 }
