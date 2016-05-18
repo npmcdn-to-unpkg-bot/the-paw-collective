@@ -14,11 +14,17 @@ $razmatazz: RGB(115, 83, 242) !default;
 $halfspanishwhite: RGB(230, 214, 197) !default;
 $graysuit: #91939F !default;
 $graysuit-active: #604c9f !default;
+$boston-blue: #3F98A0 !default;
 
 /// Color usage
-$primary-color: $blue;
+$primary-color: $boston-blue;
 $secondary-color: $redorange;
+
+// Admin Panel
 $navbar-admin-color:$razmatazz;
+$admin-title: $black;
+$admin-subtitle: $black;
+$admin-subtitle-active: $boston-blue; 
 
 /// Font size usage
 $lg-font-size: 110%;

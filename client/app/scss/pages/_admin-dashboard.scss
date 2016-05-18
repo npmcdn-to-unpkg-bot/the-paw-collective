@@ -7,8 +7,8 @@
 	padding-bottom:30px;
 
 	&-title {
-		color:white;
-		font-size:2.5em;
+		color:$admin-title;
+		font-size:2em;
 		font-weight:400;
 		padding-bottom: 10px;
 	}
@@ -17,14 +17,14 @@
 		border-bottom:1px solid #E9E9E9;
 		padding: 20px 0;
 		> a {
-			color:white;
+			color:$admin-subtitle;
 			font-size:1.1em;
 			padding-bottom: 18px;
 			margin-right:20px;
 
 			&.active {
-				border-bottom: 1px solid $secondary-color;
-				color:$secondary-color;
+				border-bottom: 1px solid $admin-subtitle-active;
+				color:$admin-subtitle-active;
 			}
 		}
 	}
