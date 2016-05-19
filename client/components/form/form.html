@@ -40,9 +40,9 @@
     </div>
     
     <div class="create-edit-box-left--status">
-        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="$ctrl.save($ctrl.formtype)">
+        <input type="submit" class="ac-button" ng-disabled="addAnimalForm.$invalid || adminAnimal.exporting" ng-click="$ctrl.upload($ctrl.formtype, croppedDataUrl, $ctrl.data)">
         <span class="progress-indicator">
-            <p class="progress-indicator--text" ng-show="adminAnimal.exporting">Uploading...</p>
+            <p class="progress-indicator--text">{{$ctrl.indicator}}</p>
         </span>
     </div>
 </form>

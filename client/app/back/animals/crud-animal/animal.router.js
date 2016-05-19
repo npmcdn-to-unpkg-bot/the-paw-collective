@@ -1,9 +1,7 @@
 'use strict'
 
 angular.module('paw_collective.animals')
-    .config(config)
-
-    function config($routeProvider) {
+    .config(function config($routeProvider) {
         $routeProvider
             .when('/admin-dashboard/create-animal', {
                 templateUrl: 'app/back/animals/crud-animal/animal.html',
@@ -24,4 +22,4 @@ angular.module('paw_collective.animals')
                     formType: () => { return 'Edit' }
                 }
             })
-    }
+    })

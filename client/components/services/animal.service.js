@@ -20,8 +20,7 @@
 
             let queue = []
 
-            if (imageFile !== animal.data.image) {
-
+            if (imageFile) {
                 imageUploader.uploadImage(imageFile, (result) => {
                     animal.image = result
                     $http.put(`/api/animal/${id}`, animal)
