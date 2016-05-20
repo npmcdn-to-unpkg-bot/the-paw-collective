@@ -9,7 +9,12 @@ angular.module('paw_collective.animals')
                 controllerAs: 'adminAnimal',
                 authenticate: 'admin', 
                 resolve : {
-                    formType: () => { return 'Create' }
+                    formType: () => {
+                        return {
+                            title: 'Create',
+                            isInterview: false
+                        }
+                    }
                 }
             })
 
@@ -19,7 +24,12 @@ angular.module('paw_collective.animals')
                 controllerAs: 'adminAnimal',
                 authenticate: 'admin', 
                 resolve : {
-                    formType: () => { return 'Edit' }
+                    formType: () => {
+                        return {
+                            title: 'Edit',
+                            isInterview: false
+                        }
+                    }
                 }
             })
     })

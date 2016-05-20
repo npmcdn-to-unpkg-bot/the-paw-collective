@@ -4,7 +4,14 @@
         <div class="create-edit-box-wrapper">
             <!-- Left Box -->
             <div class="create-edit-box-left">
-                <form name="addInterviewForm">
+                <form-component 
+                    file="adminInterview.file" 
+                    id="adminInterview.id" 
+                    data="adminInterview.interview" 
+                    formtype="adminInterview.formType" 
+                    category="adminInterview.animalCategory">
+                </form-component>
+                <!-- <form name="addInterviewForm">
                     <input 
                         type="text" 
                         ng-model="adminInterview.itv.name" 
@@ -106,7 +113,7 @@
                         <input type="submit" ng-disabled="addInterviewForm.$invalid || adminInterview.exporting" class="ac-button" ng-click="adminInterview.upload(adminInterview.itv, animalCroppedData, ownerCroppedData)">
                         <span class="progress-indicator"><p class="progress-indicator--text">{{adminInterview.indicatorStatus}}</p></span>
                     </div>
-                </form>
+                </form> -->
             </div>
             <!-- Right Box -->
             <div class="create-edit-box-right portrait">

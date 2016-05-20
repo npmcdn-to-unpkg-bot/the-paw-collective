@@ -5,7 +5,6 @@
     class adminAnimalComponent {
 
         constructor($routeParams, formType, $rootScope, AnimalDataService) {
-            this.$routeParams       = $routeParams
             
             this.formType           = formType
             this.id                 = $routeParams.id
@@ -16,10 +15,10 @@
             this.file               = ''
 
             // Set Title for Subheader
-            $rootScope.title = `${formType} an Animal`
+            $rootScope.title = `${formType.title} an Animal`
 
             // If editing an item, display the current information for that item
-            if (formType === 'Edit') {
+            if (formType.title == 'Edit') {
                 AnimalDataService.show($routeParams.id, (res) => this.animal = res.data)
             }
         }

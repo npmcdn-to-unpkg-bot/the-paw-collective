@@ -3,19 +3,39 @@
 (function() {
 
     class formCtrl {
-        constructor(AnimalDataService, $interval) {
+        constructor(AnimalDataService, $timeout, $interval) {
+
             this.AnimalDataService  = AnimalDataService
             this.$interval          = $interval
+            this.articles           = []
         }
         $onInit() {
-            console.log('init....')
+
+            // Is it an Interview?
+            if (this.formtype.isInterview) {
+                this.showInterview = true
+                this.articles = this.data.article
+            }
+            
+        }
+        addInterview() {
+            
+            // this.articles.push({
+            //     question: "",
+            //     answer: ""
+            // })
+            console.log('adding interview')
+            console.log(this.articles)
+        }
+        removeInterview(index) {
+            this.articles.splice(index, 1)
         }
         imageDropped() {
             console.log('image dropped!')
         }
         upload(formType, croppedUrlData, information) {
             this.indicator = 'Uploading'
-            this.AnimalDataService[formType === 'Edit' ? 'edit' : 'upload'](this.id, information, croppedUrlData, (result) => {
+            this.AnimalDataService[formType.title === 'Edit' ? 'edit' : 'upload'](this.id, information, croppedUrlData, (result) => {
                 // Finished Uploading
                 this.indicator = 'Finished'
                 this.$interval(() => { this.indicator = '' }, 2000)
@@ -31,8 +51,7 @@
                 category    : '=',
                 file        : '=',
                 formtype    : '=',
-                id          : '='
-            },
+                id          : '='            },
             templateUrl: 'components/form/form.html',
             controller: formCtrl
         })
