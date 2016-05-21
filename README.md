@@ -4,7 +4,7 @@
 
 ## Overview
 
-I built/designed this mainly because my younger sister wanted a site that showcased all the famous dogs around the world. 
+I built/designed this mainly because my younger sister wanted a test site that showcased all the famous dogs around the world. 
 The site would need a back-office where she would be able to make CRUD operations of famous dogs, and also the ability to
 add interviews that she would make with the dog owners. 
 
