@@ -1,5 +1,7 @@
 # THE PAW COLLECTIVE
 
+###### In Progress
+
 ## Overview
 
 I built/designed this mainly because my younger sister wanted a site that showcased all the famous dogs around the world. 
