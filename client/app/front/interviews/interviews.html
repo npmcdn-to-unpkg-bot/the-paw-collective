@@ -1,5 +1,25 @@
 <div cg-busy="{promise:$root.activePromises}"></div>
 
 <navbar></navbar>
-<footer-main></footer-main>
+<section class="interviews">
+    <div class="container">
+        <div class="subtitle_box">
+            <p>Interviews</p>
+        </div>
+        <div class="featured_interviews">
+            <div class="featured_interviews__items" ng-repeat="item in interviews.interviews  | limitTo: 2">
+                <div class="featured_interviews__items__wrap">
+                    <a href="/interview/{{item.title | slugify}}">
+                        <div class="featured_interviews__items__wrap--banner zoomin" style="background-image:url('{{item.images[0].animal_thumbnail}}')"></div>
+                    </a>
+                </div>
+                <article class="featured_interviews__items--article">
+                    <a href="/interview/{{item.title | slugify}}"><h1>{{item.title}}</h1></a>
+                    <p class="featured_interviews__items--article---excerpt">{{item.excerpt}}</p>
+                    <p class="featured_interviews__items--article---readmore"><a href="/interview/{{item.title | slugify}}">Read More</a></p>
+                </article>
+            </div>
+        </div>
+    </div>
 </section>
+<footer-main></footer-main>

@@ -6,7 +6,7 @@
 
         constructor($http, $window, AnimalDataService, InterviewDataService) {
             this.$http                  = $http
-            this.$window                = $window            
+            this.$window                = $window
 
             this.AnimalDataService      = AnimalDataService
             this.InterviewDataService   = InterviewDataService
