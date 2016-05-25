@@ -33,7 +33,7 @@
         imageDropped() {
             console.log('image dropped!')
         }
-        upload(formType, croppedUrlData, information) {
+        upload(formType, information, croppedUrlData) {
             this.indicator = 'Uploading'
             this.AnimalDataService[formType.title === 'Edit' ? 'edit' : 'upload'](this.id, information, croppedUrlData, (result) => {
                 // Finished Uploading
